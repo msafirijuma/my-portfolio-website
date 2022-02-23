@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script&family=Lato:wght@300;400&family=Raleway:wght@300;400&display=swap");
+
+/* font-family: "Bad Script", cursive;
+font-family: "Dancing Script", cursive;
+font-family: "Lato", sans-serif;
+font-family: "Raleway", sans-serif; */
+
 :root {
   --primary-font: "lato", san-seriff;
   --primary-color: #eabcde;
@@ -53,8 +60,13 @@ body {
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   background-color: var(--primary);
-  margin: 5px 10px;
+  color: #fff;
+  padding: 1rem;
 }
 
 .container-blog {
@@ -75,7 +87,10 @@ body {
 
 .brand-name {
   /* font-family: cursive; */
-  font-size: 1.26rem;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-family: "Bad Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
 }
 
 .nav-bar .list-group {
@@ -93,13 +108,12 @@ body {
   color: var(--off-white);
   text-decoration: none;
   font-weight: 100px;
-  margin: 2px;
+  margin: 2px 4px;
+  transition: color 0.8s;
 }
 
 .nav-bar .link:hover {
   color: var(--secondary-focus);
-  text-decoration: underline;
-  font-weight: bolder;
 }
 
 .active-link {
@@ -161,10 +175,11 @@ footer .list-group .list-item {
 
 /*  Image Profile */
 
-.img {
-  width: 300px;
+.my-image {
+  width: 180px;
+  height: auto;
   border-radius: 50%;
-  margin: 8px auto;
+  margin: 10px auto;
 }
 
 /* Developer Tools // Technologies */
@@ -278,4 +293,16 @@ footer .list-group .list-item {
   font-size: smaller;
   margin-top: 16px;
   margin-bottom: 3px;
+}
+
+/* MEDIA SCREEN ( MOBILE DEVICE ) */
+
+@media screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
 }
