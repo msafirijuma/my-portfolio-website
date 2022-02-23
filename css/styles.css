@@ -74,15 +74,13 @@ body {
   text-align: center;
   font-size: 1rem;
   color: var(--off-white);
-  /* font-family: Arial, Helvetica, sans-serif; */
   border-bottom-left-radius: 0.5rem;
   border-top-right-radius: 0.4rem;
 }
 
 .social {
   background-color: var(--primary-dark);
-  margin: 5px 10px;
-  padding: 30px;
+  padding: 20px;
 }
 
 .brand-name {
@@ -121,23 +119,23 @@ body {
   border-bottom: 1px solid var(--off-white);
 }
 
-/* footer */
+/* FOOTER */
 
-footer .nav-bar .list-group {
+.footer .nav-bar .list-group {
   list-style-type: none;
   text-align: right;
   padding: 0.6rem;
   margin: 0.4rem;
 }
 
-footer .link {
+.footer .link {
   color: var(--off-white);
   text-decoration: none;
   font-weight: 100px;
   margin: 2px;
 }
 
-footer .list-group .list-item {
+.footer .list-group .list-item {
   display: inline;
 }
 
