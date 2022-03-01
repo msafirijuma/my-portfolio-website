@@ -28,6 +28,68 @@ body {
   padding: 0;
 }
 
+/* HEADER SECTION */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+}
+
+/* NAVIGATION MENU */
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-family: "Bad Script", cursive;
+  text-shadow: 2px 2px 1px #999;
+}
+
+.nav-bar .list-group {
+  list-style-type: none;
+  text-align: right;
+  padding: 0.8rem;
+  margin: 0.6rem;
+}
+
+.nav-bar .list-group .list-item {
+  display: inline-block;
+}
+
+.nav-bar .link {
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: 100px;
+  margin: 2px 4px;
+  transition: color 0.8s;
+}
+
+.nav-bar .link:hover {
+  color: var(--secondary-focus);
+}
+
+.active-link {
+  /* font-size: medium; */
+  border-bottom: 1px solid var(--off-white);
+}
+
+/* HUMBERGER ICON */
+.humburger {
+  display: none;
+}
+
+.humburger-link {
+  color: #fefefe;
+}
+
+/* SOCIAL LINKS INSIDE HAMBURGER ICON MOBILE SCREEN SIZES */
+.social-medias {
+  display: none;
+}
+
+/* MAIN SECTION */
 .container {
   max-width: 900;
   margin: 3px auto;
@@ -59,17 +121,6 @@ body {
   border: 2px solid var(--primary);
 }
 
-/* HEADER */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  background-color: var(--primary);
-  color: #fff;
-  padding: 1rem;
-}
-
 .container-blog {
   background-color: gray;
   text-align: center;
@@ -84,45 +135,10 @@ body {
   padding: 20px;
 }
 
-.brand-name {
-  /* font-family: cursive; */
-  font-size: 1.3rem;
-  font-weight: lighter;
-  font-family: "Bad Script", cursive;
-  /* font-family: "Dancing Script", cursive; */
-}
-
-.nav-bar .list-group {
-  list-style-type: none;
-  text-align: right;
-  padding: 0.6rem;
-  margin: 0.4rem;
-}
-
-.nav-bar .list-group .list-item {
-  display: inline-block;
-}
-
-.nav-bar .link {
-  color: var(--off-white);
-  text-decoration: none;
-  font-weight: 100px;
-  margin: 2px 4px;
-  transition: color 0.8s;
-}
-
-.nav-bar .link:hover {
-  color: var(--secondary-focus);
-}
-
-.active-link {
-  /* font-size: medium; */
-  border-bottom: 1px solid var(--off-white);
-}
-
+.b
 /* FOOTER */
 
-.footer .nav-bar .list-group {
+.footer .list-group {
   list-style-type: none;
   text-align: right;
   padding: 0.6rem;
@@ -298,27 +314,107 @@ body {
 
 /* Hide humburger menu */
 
-.nav-bar > .list-group > .list-item:last-child > a {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
-  /* For future
-  :not(:last-child)
-  */
-
-  .nav-bar > .list-group > .list-item:not(:last-child) a {
-    display: none;
-  }
-
-  .nav-bar > .list-group > .list-item:last-child > a {
-    display: inline-block;
-  }
-
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+  }
+  .humburger {
+    display: block;
+    position: relative;
+    right: 2px;
+  }
+
+  .humburger-link {
+    font-size: 1.5rem;
+  }
+
+  .humburger-link:hover {
+    color: var(--primary);
+  }
+
+  .nav-bar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fefefe;
+    width: 100%;
+    transition: 0.8s;
+    height: 0; /* hide the height */
+    overflow: hidden; /* overflow to not display content and their action otherwise the hamberger menu is activated */
+  }
+  .nav-bar.active {
+    height: 100vh;
+  }
+  .nav-bar .list-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .nav-bar .list-group .list-item {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+
+  .social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .social-medias .fa {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .social-medias .fa-twitter {
+    color: #00acee;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .social-medias .fa-twitter:hover {
+    color: white;
+    background-color: #00acee;
+  }
+
+  .social-medias .fa-linkedin {
+    color: white;
+    background-color: #0e76a8;
+    border-radius: 10px;
+  }
+  .social-medias .fa-linkedin:hover {
+    color: #0e76a8;
+    background-color: white;
+  }
+
+  .social-medias .fa-github {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .social-medias .fa-github:hover {
+    color: white;
+    background-color: black;
+  }
+
+  .social-medias .fa:hover {
+    opacity: 0.9;
+  }
+  .social-medias > .fa {
+    margin: 20px;
+    font-size: 1.5rem;
   }
 }
