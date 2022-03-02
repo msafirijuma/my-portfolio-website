@@ -21,6 +21,7 @@ font-family: "Raleway", sans-serif; */
 body {
   font-family: --var(--primary-font);
   font-size: 17px;
+  color: #e9e9e9 !important;
 }
 
 * {
@@ -320,11 +321,19 @@ body {
 /* Hide humburger menu */
 
 @media screen and (max-width: 768px) {
+  /* Image in mobile screens */
+  .my-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 10px auto;
+  }
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    padding: 10px;
   }
   .brand-name {
     font-size: 1.7rem;
@@ -333,15 +342,15 @@ body {
     display: block;
     position: relative;
     right: 2px;
-    top: 10px;
-    width: 50px;
-    height: 50px;
+    padding: 10px;
   }
 
   .humburger-link {
-    font-size: 1.5rem;
+    display: block;
+    font-size: 1.1rem;
     border: 3px solid #fefefe;
-    padding: 6px;
+    padding: 10px;
+    border: 3px solid white;
     border-radius: 50%;
   }
 
@@ -351,13 +360,14 @@ body {
 
   .nav-bar {
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: #2b3439;
     color: #fefefe;
+    /* color: #e9e9e9; */
     width: 100%;
-    transition: all 1.5s ease-in-out;
+    transition: all 1.2s ease-in-out;
     height: 0; /* hide the height */
     overflow: hidden; /* overflow to not display content and their action otherwise the hamberger menu is activated */
   }
@@ -370,12 +380,19 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    border-left: 6px solid var(--off-white);
+    border-right: 6px solid var(--off-white);
+    border-radius: 100%;
   }
 
   .nav-bar .list-group .list-item {
     margin: 15px 0;
     font-size: 1.6rem;
     font-weight: lighter;
+  }
+
+  .nav-bar .list-group .list-item .link {
+    font-size: 1.6rem;
   }
 
   .social-medias {
