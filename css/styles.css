@@ -408,12 +408,29 @@ legend {
   width: 250px;
   height: 40px;
   border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 1.1rem;
 }
 
-::placeholder {
+.form-group textarea {
+  width: 270px;
+  border-radius: 8px;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 1.1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
   font-size: 1.1rem;
   padding: 5px;
   margin-left: 5px;
+}
+
+input:focus,
+textarea:focus {
+  font-size: 1.1rem;
+  border: 1px solid red;
 }
 
 .contact-divider {
@@ -459,7 +476,7 @@ legend {
 
 #red-asterisk {
   display: block;
-  margin: 15px;
+  margin: 17px;
 }
 
 /* MEDIA SCREEN ( MOBILE DEVICE ) */
