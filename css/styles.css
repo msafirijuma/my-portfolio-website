@@ -249,6 +249,21 @@ body {
   list-style-type: none;
 }
 
+.technology li{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbb;
+  margin: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: .6rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
+
 .social .list-group .list-item .fa {
   padding: 10px;
   font-size: 1.5rem;
