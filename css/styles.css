@@ -253,7 +253,8 @@ body {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  background-color: #bbb;
+  background-color: #999;
+  color: #ddd;
   margin: 0.5rem;
   width: auto;
   height: auto;
@@ -593,7 +594,7 @@ textarea:focus {
     text-align: center;
     flex-direction: column;
     margin: 0rem 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     padding: 1rem 2rem;
     border-left: 6px solid var(--off-white);
     border-right: 6px solid var(--off-white);
@@ -601,7 +602,7 @@ textarea:focus {
   }
 
   .nav-bar .list-group .list-item {
-    margin: 5px 10px;
+    margin: 4px 10px;
     font-size: 1.6rem;
     font-weight: lighter;
   }
@@ -615,7 +616,7 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   .social-medias .fa {
