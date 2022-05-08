@@ -81,7 +81,7 @@ body {
   font-size: 1.4rem;
 }
 
-.nav-bar .link::after{
+.nav-bar .list-group .link::after{
   content: " ";
   display: flex;
   justify-content: center;
@@ -573,19 +573,18 @@ textarea:focus {
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 88px;
     left: 0;
     right: 0;
     background-color: #2b3439;
     color: #fefefe;
-    /* color: #e9e9e9; */
     width: 100%;
-    transition: all 1.2s ease-in-out;
+    transition: all 0.8s ease-in-out;
     height: 0; /* hide the height */
     overflow: hidden; /* overflow to not display content and their action otherwise the hamberger menu is activated */
   }
   .nav-bar.active {
-    height: 100vh;
+    height: 100%;
   }
   .nav-bar .list-group {
     display: flex;
@@ -593,9 +592,9 @@ textarea:focus {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    margin: 0rem 1rem;
+    margin: 0.3rem 1rem;
     margin-bottom: 0.2rem;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-left: 6px solid var(--off-white);
     border-right: 6px solid var(--off-white);
     border-radius: 100%;
@@ -661,7 +660,7 @@ textarea:focus {
     opacity: 0.9;
   }
   .social-medias > .fa {
-    margin: 20px;
+    margin: 10px 20px 10px;
     font-size: 1.5rem;
   }
 }
