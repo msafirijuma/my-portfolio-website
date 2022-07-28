@@ -55,7 +55,7 @@ body::after {
   flex-direction: row;
   background-color: var(--secondary-focus);
   color: var(--text-white-color);
-  padding: 0 10px;
+  padding: 0 15px;
   position: sticky !important;
   top: 0;
   z-index: 100;
@@ -71,6 +71,10 @@ body::after {
 }
 
 
+/* navbar when scrolled */
+.navbar-scroll {
+  background-color: var(--dark-mode);
+}
 
 .nav-bar{
   display: flex;
@@ -131,6 +135,10 @@ body::after {
   color: #fefefe;
 }
 
+.theme {
+  margin-top: -38px;
+}
+
 /* SOCIAL LINKS INSIDE HAMBURGER ICON MOBILE SCREEN SIZES */
 .social-medias {
   display: none;
@@ -169,12 +177,12 @@ body::after {
   border-top-right-radius: 0.4rem;
 }
 
+
+/* FOOTER */
 .social {
   background-color: var(--secondary-focus);
   padding: 20px;
 }
-
-/* FOOTER */
 
 .footer {
   color: var(--text-white-color);
@@ -190,7 +198,7 @@ body::after {
 .footer .link {
   color: var(--off-white);
   text-decoration: none;
-  font-weight: 100px;
+  font-weight: 100;
   margin: 2px;
 }
 
@@ -204,10 +212,86 @@ body::after {
 
 .social .link {
   padding: 3px;
+} 
+
+
+.social .list-group .list-item .fa {
+  padding: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
 }
-.social .link:hover {
+
+
+.social .list-group .list-item .fa-twitter {
+  color: #fff;
+  background-color: #00acee;
+}
+
+.social .list-group .list-item .fa-twitter:hover {
+  color: #00acee;
+  background-color: #fff;
+}
+
+
+ 
+.social .list-group .list-item .fa-linkedin {
+  color: white;
+  background-color: #0e76a8;
+}
+
+.social .list-group .list-item .fa-linkedin:hover {
+  color: #0e76a8;
+  background-color: white;
+}
+
+.social .list-group .list-item .fa-github {
+  color: black;
+  background-color: white;
+}
+
+.social .list-group .list-item .fa-github:hover {
+  color: white;
+  background-color: black;
+}
+
+.social .list-group .list-item .fa-whatsapp {
+  color: white;
+  background-color: #25d366;
+}
+
+.social .list-group .list-item .fa-whatsapp:hover {
+  color: white;
+  background-color: #128c7e;
+}
+
+.social .list-group .list-item .fa:hover {
+  opacity: 0.9;
+}
+
+#scrolltop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  visibility: hidden;
+  z-index: 100;
+}
+
+#scrolltop:hover {
+  cursor: pointer;
+}
+
+.fa-chevron-up {
+  width: 30px;
+  height: 30px;
+  padding: 3px 4px;
+  text-align: center;
+  background-color: var(--off-white);
+  border-radius: 50%;
   color: var(--secondary-focus);
-  text-decoration: underline;
 }
 
 .btn {
@@ -231,6 +315,7 @@ body::after {
   font-weight: 500;
 }
 
+
 /*  Image Profile */
 
 .my-image {
@@ -240,84 +325,8 @@ body::after {
   margin: 10px auto;
 }
 
-/* Developer Tools / Technologies */
-
-.technologies-list {
-  margin: auto;
-}
-
-.technology {
-  list-style-type: none;
-}
-
-.technology li{
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  background-color: #999;
-  color: var(--text-white-color);
-  margin: 0.5rem;
-  width: auto;
-  height: auto;
-  padding: .6rem 0.7rem;
-  font-size: 1.3rem;
-  line-height: 1.3rem;
-  letter-spacing: 1px;
-  border-radius: 6px;
-}
 
 
-.social .list-group .list-item .fa {
-  padding: 10px;
-  font-size: 1.5rem;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-
-}
-
-.social .list-group .list-item .fa-twitter {
-  color: #fff;
-  background-color: #00acee;
-}
-.social .list-group .list-item .fa-twitter:hover {
-  color: #00acee;
-  background-color: #fff;
-}
-
-.social .list-group .list-item .fa-linkedin {
-  color: white;
-  background-color: #0e76a8;
-}
-.social .list-group .list-item .fa-linkedin:hover {
-  color: #0e76a8;
-  background-color: white;
-}
-
-.social .list-group .list-item .fa-github {
-  color: black;
-  background-color: white;
-}
-.social .list-group .list-item .fa-github:hover {
-  color: white;
-  background-color: black;
-}
-
-.social .list-group .list-item .fa-whatsapp {
-  color: white;
-  background-color: #25d366;
-}
-
-.social .list-group .list-item .fa-whatsapp:hover {
-  color: white;
-  background-color: #128c7e;
-}
-
-.social .list-group .list-item .fa:hover {
-  opacity: 0.9;
-}
 
 .divider {
   width: 20vh;
@@ -339,6 +348,31 @@ body::after {
   color: var(--primary);
 }
 
+/* Developer Tools / Technologies */
+
+.technologies-list {
+  margin: auto;
+}
+
+.technology {
+  list-style-type: none;
+}
+
+.technology li {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: #999;
+  color: var(--text-white-color);
+  margin: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: .6rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
 
 /* PROJECTS */
 
@@ -510,6 +544,8 @@ body::after {
   flex-direction: column;
   padding: 3px;
   margin-top: 10px;
+  max-width: 800px;
+  border: 1px solid red;
 }
 
 fieldset {
@@ -636,6 +672,7 @@ textarea:focus {
 /* Show humburger menu */
 
 @media screen and (max-width: 768px) {
+
   #projects {
     padding-top: 20px;
   }
@@ -683,22 +720,13 @@ textarea:focus {
   .humburger {
     display: block;
     position: relative;
-    right: 2px;
+    right: 3px;
     padding: 5px 10px;
     margin-top: -0.4rem;
   }
 
   .humburger-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    font-size: 1.1rem;
-    border: 3px solid #fefefe;
-    padding: 10px;
-    border: 3px solid white;
-    border-radius: 50%;
+    font-size: 2rem;
     text-decoration: none;
   }
 
@@ -709,7 +737,7 @@ textarea:focus {
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 49.5px;
+    top: 67.9px;
     left: 0;
     right: 0;
     background-color: #2b3439;
@@ -724,6 +752,7 @@ textarea:focus {
     justify-content: flex-start;
     padding-top: 60px;
   }
+
   .nav-bar .list-group {
     display: flex;
     justify-content: center;
@@ -760,13 +789,19 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1.25rem;
+    padding: -3.75rem;
+  }
+
+  .social-medias .link-social {
+    color: var(--off-white);
+    text-decoration: none;
+    font-weight: 100;
+    margin: 20px 8px;
   }
 
   .social-medias .fa {
-    padding: 10px;
+    padding: 16px;
     font-size: 1.5rem;
-    width: 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
@@ -776,6 +811,7 @@ textarea:focus {
     color: white;
     background-color: #00acee;
   }
+
   .social-medias .fa-twitter:hover {
     color: #00acee;
     background-color: white;
@@ -785,6 +821,7 @@ textarea:focus {
     color: white;
     background-color: #0e76a8;
   }
+
   .social-medias .fa-linkedin:hover {
     color: #0e76a8;
     background-color: white;
@@ -794,6 +831,7 @@ textarea:focus {
     color: black;
     background-color: white;
   }
+
   .social-medias .fa-github:hover {
     color: white;
     background-color: black;
@@ -805,6 +843,16 @@ textarea:focus {
   .social-medias > .fa {
     margin: 10px 20px 10px;
     font-size: 1.5rem;
+  }
+
+  .theme {
+    display: flex;
+    margin-block: 22px 10px;
+    margin-bottom: 0px;
+  }
+
+  .form {
+    width: 100%;
   }
 }
 
@@ -833,6 +881,7 @@ textarea:focus {
 }
 
 /* Dark AND Light Mode */
+
 .dark {
   background-color: var(--dark-mode);
   color: #fff;

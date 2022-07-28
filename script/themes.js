@@ -156,5 +156,21 @@ themeToggler.addEventListener("click", () => {
         themeToggler.title = "Switch to dark mode"
     }
     document.body.classList.toggle("dark");
+    
+    //  window.location = "../index.html"
 })
 
+
+// Navbar Scroll AND chevron-up icon
+const header = document.querySelector(".header");
+const scrolltop = document.querySelector("#scrolltop");
+window.addEventListener("scroll", () => {
+    
+    if (window.document.documentElement.scrollTop >= 100) {
+        header.classList.add("navbar-scroll");
+        scrolltop.style.visibility = "visible"
+    } else {
+        header.classList.remove("navbar-scroll");
+         scrolltop.style.visibility = "hidden"
+    }
+})
