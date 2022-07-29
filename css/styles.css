@@ -316,7 +316,7 @@ body::after {
   cursor: pointer;
 }
 
-.section-header {
+.section-header, .section-header-dark-mode {
   color: #111;
   padding: 6px 4px;
   font-size: 2.5rem;
@@ -343,17 +343,6 @@ body::after {
   margin: 3px auto;
   margin-bottom: 20px;
   background-color: var(--primary);
-}
-
-.name {
-  font-size: 1.15rem;
-  color: var(--text-dark-color);
-  margin: 0 4px;
-  font-weight: lighter;
-}
-
-.off-white-section .name {
-  color: var(--primary);
 }
 
 /* Developer Tools / Technologies */
@@ -575,7 +564,7 @@ label {
   display: inline-block;
 }
 
-.form-label {
+.form-label, .form-label-dark-mode{
   margin-bottom: 0.5rem;
   text-align: left;
 }
@@ -879,6 +868,10 @@ label {
   .contact-off-white-section form {
     width: 375px;
   }
+
+  .section-header, .section-header-dark-mode {
+    font-size: 2rem;
+  }
 }
 
 
@@ -918,16 +911,7 @@ label {
 }
 
 .section-header-dark-mode,
-.name-dark-mode,
-.contact-name-dark-mode,
-.contact-link-dark-mode,
-.red-asterisk-dark-mode,
-.label-dark-mode
+.form-label-dark-mode
 {
   color: var(--dark-mode-text-color) !important;
-}
-
-.red-asterisk-dark-mode {
-  display: block;
-  margin: 20px;
 }

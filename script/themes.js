@@ -1,22 +1,10 @@
 const themeToggler = document.querySelector("#themeToggler");
 const sectionHeaders = document.querySelectorAll(".section-header");
-const nameDev = document.querySelector(".name");
-const contactNames = document.querySelectorAll(".contact-name");
-const contactLinks = document.querySelectorAll(".contact-link");
-const labels = document.querySelectorAll(".label");
-const redAsterisk = document.querySelector(".red-asterisk")
+const labels = document.querySelectorAll(".form-label");
 
 
 // Toggle Text Color (Dark Mode)
 const toggleTextColorDark = () => {
-    if (nameDev.classList.contains("name") && redAsterisk.classList.contains("red-asterisk")) {
-        nameDev.classList.replace("name", "name-dark-mode");
-        redAsterisk.classList.replace("red-asterisk", "red-asterisk-dark-mode")
-    } else {
-        nameDev.classList.replace("name-dark-mode", "name")
-        redAsterisk.classList.replace("red-asterisk-dark-mode", "red-asterisk");
-    }
-
     for (let sectionHeader of sectionHeaders) {
         if (sectionHeader.classList.contains("section-header")) {
             sectionHeader.classList.replace("section-header", "section-header-dark-mode")
@@ -25,42 +13,19 @@ const toggleTextColorDark = () => {
         }
     }
 
-    for (let contactName of contactNames) {
-        if (contactName.classList.contains("contact-name")) {
-            contactName.classList.replace("contact-name", "contact-name-dark-mode")
-        } else {
-            contactName.classList.replace("contact-name-dark-mode", "contact-name")
-        }
-    }
-
     for (let label of labels) {
-        if (label.classList.contains("label")) {
-            label.classList.replace("label", "label-dark-mode")
+        if (label.classList.contains("form-label")) {
+            label.classList.replace("form-label", "form-label-dark-mode")
         } else {
-            label.classList.replace("label-dark-mode", "label")
+            label.classList.replace("form-label-dark-mode", "form-label")
         }
     }
 
-    for (let contactLink of contactLinks) {
-        if (contactLink.classList.contains("contact-link")) {
-            contactLink.classList.replace("contact-link", "contact-link-dark-mode")
-        } else {
-            contactLink.classList.replace("contact-link-dark-mode", "contact-link")
-        }
-    }
 }
 
 
 // Toggle Text Color (Dark Mode)
 const toggleTextColorLight = () => {
-    if (nameDev.classList.contains("name-dark-mode") && redAsterisk.classList.contains("red-asterisk-dark-mode")) {
-         nameDev.classList.replace("name-dark-mode", "name");
-         redAsterisk.classList.replace("red-asterisk-dark-mode", "red-asterisk");
-    } else {
-         nameDev.classList.replace("name", "name-dark-mode");
-         redAsterisk.classList.replace("red-asterisk", "red-asterisk-dark-mode");
-    }
-
     for (let sectionHeader of sectionHeaders) {
         if (sectionHeader.classList.contains("section-header-dark-mode")) {
             sectionHeader.classList.replace("section-header-dark-mode", "section-header")
@@ -69,27 +34,11 @@ const toggleTextColorLight = () => {
         }
     }
 
-    for (let contactName of contactNames) {
-        if (contactName.classList.contains("contact-name-dark-mode")) {
-            contactName.classList.replace("contact-name-dark-mode", "contact-name")
-        } else {
-            contactName.classList.replace("contact-name", "contact-name-dark-mode")
-        }
-    }
-
     for (let label of labels) {
-        if (label.classList.contains("label-dark-mode")) {
-            label.classList.replace("label-dark-mode", "label")
+        if (label.classList.contains("form-label-dark-mode")) {
+            label.classList.replace("form-label-dark-mode", "form-label")
         } else {
-            label.classList.replace("label", "label-dark-mode")
-        }
-    }
-
-    for (let contactLink of contactLinks) {
-        if (contactLink.classList.contains("contact-link-dark-mode")) {
-            contactLink.classList.replace("contact-link-dark-mode", "contact-link")
-        } else {
-            contactLink.classList.replace("contact-link", "contact-link-dark-mode")
+            label.classList.replace("form-label", "form-label-dark-mode")
         }
     }
 }
