@@ -122,7 +122,7 @@ body::after {
 
 
 .active-link {
-  color: #888 !important;
+  color: paleturquoise !important;
   font-weight: larger;
 }
 
@@ -142,6 +142,68 @@ body::after {
 /* SOCIAL LINKS INSIDE HAMBURGER ICON MOBILE SCREEN SIZES */
 .social-medias {
   display: none;
+}
+
+.social-medias .link-social {
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: 100;
+  margin: 20px 8px;
+}
+
+.social-medias .fa {
+  padding: 16px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.social-medias .fa-twitter {
+  color: white;
+  background-color: #00acee;
+}
+
+.social-medias .fa-twitter:hover {
+  color: #00acee;
+  background-color: white;
+}
+
+.social-medias .fa-linkedin {
+  color: white;
+  background-color: #0e76a8;
+}
+
+.social-medias .fa-linkedin:hover {
+  color: #0e76a8;
+  background-color: white;
+}
+
+.social-medias .fa-github {
+  color: white;
+  background-color: var(--text-dark-color);
+}
+
+.social-medias .fa-github:hover {
+  color: var(--text-dark-color);
+  background-color: white;
+}
+
+.social-medias .fa:hover {
+  opacity: 0.9;
+}
+
+.social-medias>.fa {
+  margin: 10px 20px 10px;
+  font-size: 1.5rem;
+}
+
+#social-medias-hero {
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: -3.75rem;
 }
 
 /* MAIN SECTION */
@@ -183,6 +245,17 @@ body::after {
   align-items: flex-start;
   flex-direction: row;
   padding-top: 3rem;
+}
+
+#hero-section .btn-contact-me{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 8px 10px;
+  height: auto;
+  border-radius: 10px;
+  background-color: var(--secondary-focus);
+  text-align: center;
 }
 
 
@@ -303,10 +376,11 @@ body::after {
 }
 
 .btn {
-  width: 150px;
-  height: 30px;
-  border-radius: 1.25rem;
-  background-color: var(--primary-dark);
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px 60px;
+  height: auto;
+  background-color: var(--secondary-focus);
   font-size: 18px;
   color: var(--off-white);
   margin: 10px auto;
@@ -384,6 +458,7 @@ body::after {
   min-height: 100vh;
   padding: 0;
   padding-top: 30px;
+  padding-bottom: 45px;
 }
 
 .cards-container {
@@ -394,7 +469,8 @@ body::after {
   padding: 20px;
 }
 
-.cards-container .card {
+.cards-container .card,
+.cards-container .card-dark-mode {
   width: 348px;
   background-color: var(--off-white);
   color: var(--text-dark-color);
@@ -406,11 +482,12 @@ body::after {
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover {
+.card:hover, .card-dark-mode:hover {
   box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.cards-container .card .card-img {
+.cards-container .card .card-img,
+.cards-container .card-dark-mode .card-img {
   width: 100%;
   object-fit: cover;
   cursor: pointer;
@@ -418,7 +495,8 @@ body::after {
   border-radius: 10px 10px 0 0;
 }
 
-.cards-container .card .card-body {
+.cards-container .card .card-body,
+.cards-container .card-dark-mode .card-body {
   padding: 10px;
 }
 
@@ -437,7 +515,8 @@ body::after {
 }
 
 
-.cards-container .card .card-footer {
+.cards-container .card .card-footer,
+.cards-container .card-dark-mode .card-footer {
   display: flex;
   justify-content: space-between;
   font-size: 15px;
@@ -593,18 +672,19 @@ label {
   width: 100%;
   background-color: var(--secondary-focus);
   padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
   color: var(--text-white-color);
 }
 
 /* MEDIA SCREEN ( MOBILE DEVICE ) */
 @media screen and (max-width: 1100px) {
-  .card {
+  .card, .card-dark-mode {
     margin: 1rem 0;
   }
 
-  .cards-container .card .card-img {
+  .cards-container .card .card-img, 
+  .cards-container .card-dark-mode .card-img {
     object-fit: cover;
     height: 350px;
   }
@@ -613,11 +693,11 @@ label {
     font-size: 17px;
   }
 
-  .card .card-title {
+  .card .card-title, .card-dark-mode .card-title {
     font-size: 1.95rem;
   }
 
-  .card .card-text {
+  .card .card-text, .card-dark-mode .card-text {
     font-size: 1.4rem;
     height: 190px;
   }
@@ -656,7 +736,7 @@ label {
     font-size: 2rem;
   }
 
-  .card {
+  .card, .card-dark-mode {
     width: 335px;
   }
 
@@ -683,6 +763,13 @@ label {
     flex-direction: column;
   }
 
+  .social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: -3.75rem;
+  }
   #projects {
     padding-top: 20px;
   }
@@ -690,12 +777,12 @@ label {
   .cards-container {
     padding: 15px;
   }
-  .cards-container .card {
+  .cards-container .card, .cards-container .card-dark-mode {
     width: 100%;
     margin: 1rem 0;
   }
 
-  .cards-container .card .card-img {
+  .cards-container  .card-img {
     object-fit: cover;
     width: 100%;
     height: 230px;
@@ -750,7 +837,7 @@ label {
     top: 108px;
     left: 0;
     right: 0;
-    background-color: #2b3439;
+    background-color: var(--secondary-focus);
     color: #fefefe;
     width: 100%;
     transition: all 0.8s ease-in-out;
@@ -792,67 +879,6 @@ label {
     line-height: 1.5rem;
     font-size: 1.2rem;
     padding: 2px 1px;
-  }
-
-  .social-medias {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: -3.75rem;
-  }
-
-  .social-medias .link-social {
-    color: var(--off-white);
-    text-decoration: none;
-    font-weight: 100;
-    margin: 20px 8px;
-  }
-
-  .social-medias .fa {
-    padding: 16px;
-    font-size: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-  }
-
-  .social-medias .fa-twitter {
-    color: white;
-    background-color: #00acee;
-  }
-
-  .social-medias .fa-twitter:hover {
-    color: #00acee;
-    background-color: white;
-  }
-
-  .social-medias .fa-linkedin {
-    color: white;
-    background-color: #0e76a8;
-  }
-
-  .social-medias .fa-linkedin:hover {
-    color: #0e76a8;
-    background-color: white;
-  }
-
-  .social-medias .fa-github {
-    color: black;
-    background-color: white;
-  }
-
-  .social-medias .fa-github:hover {
-    color: white;
-    background-color: black;
-  }
-
-  .social-medias .fa:hover {
-    opacity: 0.9;
-  }
-  .social-medias > .fa {
-    margin: 10px 20px 10px;
-    font-size: 1.5rem;
   }
 
   .theme {
@@ -914,4 +940,9 @@ label {
 .form-label-dark-mode
 {
   color: var(--dark-mode-text-color) !important;
+}
+
+.cards-container .card-dark-mode {
+  background-color: var(--text-dark-color);
+  color: var(--dark-mode-text-color);
 }

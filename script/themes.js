@@ -1,9 +1,10 @@
 const themeToggler = document.querySelector("#themeToggler");
 const sectionHeaders = document.querySelectorAll(".section-header");
 const labels = document.querySelectorAll(".form-label");
+const cards = document.querySelectorAll(".card")
 
 
-// Toggle Text Color (Dark Mode)
+// Toggle Black Text Color (Dark Mode)
 const toggleTextColorDark = () => {
     for (let sectionHeader of sectionHeaders) {
         if (sectionHeader.classList.contains("section-header")) {
@@ -24,7 +25,7 @@ const toggleTextColorDark = () => {
 }
 
 
-// Toggle Text Color (Dark Mode)
+// Toggle White Text Color (Dark Mode)
 const toggleTextColorLight = () => {
     for (let sectionHeader of sectionHeaders) {
         if (sectionHeader.classList.contains("section-header-dark-mode")) {
@@ -41,6 +42,7 @@ const toggleTextColorLight = () => {
             label.classList.replace("form-label", "form-label-dark-mode")
         }
     }
+
 }
 
 
@@ -66,6 +68,15 @@ const toggleDarkMode = () => {
             coloredContainer.classList.replace("colored-container-dark-mode", "container");
         }
     }
+
+    for (let card of cards) {
+        if (card.classList.contains("card")) {
+            card.classList.replace("card", "card-dark-mode")
+        } else {
+            card.classList.replace("card-dark-mode", "card")
+        }
+    }
+
 }
 
 
@@ -90,6 +101,15 @@ const toggleLightMode = () => {
             coloredContainer.classList.replace("container","colored-container-dark-mode");
         }
     }
+
+    for (let card of cards) {
+        if (card.classList.contains("card-dark-mode")) {
+            card.classList.replace("card-dark-mode", "card");
+        } else {
+            card.classList.replace("card", "card-dark-mode")
+        }
+    }
+
 }
 
 
