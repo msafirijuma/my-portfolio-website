@@ -1,6 +1,13 @@
- var humburger = document.querySelector(".humburger");
+const humburger = document.querySelector(".humburger");
+const navbar = document.querySelector(".nav-bar");
+const humburgerIcon = document.querySelector(".fa-bars")
 
-    humburger.onclick = function () {
-        var navBar = document.querySelector(".nav-bar");
-        navBar.classList.toggle("active");
+humburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    
+    if (humburgerIcon.classList.contains("fa-bars")) {
+        humburgerIcon.classList.replace("fa-bars", "fa-times")
+    } else {
+        humburgerIcon.classList.replace("fa-times", "fa-bars")
     }
+})

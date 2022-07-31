@@ -247,6 +247,10 @@ body::after {
   padding-top: 3rem;
 }
 
+.hero-description .hero-text {
+  font-size: 1.4rem;
+}
+
 #hero-section .btn-contact-me{
   width: 80%;
   display: flex;
@@ -256,8 +260,13 @@ body::after {
   border-radius: 10px;
   background-color: var(--secondary-focus);
   text-align: center;
+  font-size: 20px;
 }
 
+#hero-section .btn-contact-me a {
+  text-decoration: none;
+  color: var(--dark-mode-text-color);
+}
 
 /* FOOTER */
 .social {
@@ -945,4 +954,9 @@ label {
 .cards-container .card-dark-mode {
   background-color: var(--text-dark-color);
   color: var(--dark-mode-text-color);
+}
+
+.fa .fa-times {
+  font-size: 1.9rem;
+  transition: all 2.5s ease-in-out;
 }
