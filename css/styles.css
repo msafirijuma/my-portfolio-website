@@ -51,7 +51,7 @@ body::after {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   background-color: var(--secondary-focus);
   color: var(--text-white-color);
@@ -73,7 +73,7 @@ body::after {
 
 /* navbar when scrolled */
 .navbar-scroll {
-  background-color: var(--dark-mode);
+  background-color: turquoise;
 }
 
 .nav-bar{
@@ -365,7 +365,7 @@ body::after {
   align-items: center;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 15px;
   visibility: hidden;
   z-index: 100;
 }
@@ -374,14 +374,20 @@ body::after {
   cursor: pointer;
 }
 
+#scrolltop .fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .fa-chevron-up {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   padding: 3px 4px;
   text-align: center;
-  background-color: var(--off-white);
-  border-radius: 50%;
-  color: var(--secondary-focus);
+  background-color: var(--dark-mode);
+  border-radius: 10px;
+  color: var(--off-white);
 }
 
 .btn {
@@ -600,14 +606,7 @@ body::after {
   margin-top: 2px;
   margin-bottom: 5px;
 }
-.mission-header {
-  color: #111;
-  margin: 4px 2px;
-  margin-top: 1px;
-  padding: 8px;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
+
 
 .copyright{
   display: flex;
@@ -686,6 +685,87 @@ label {
   color: var(--text-white-color);
 }
 
+/* ABOUT PAGE */
+
+.education-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  padding: 8px 20px;
+  max-width: 800px;
+}
+
+.education-section p,
+.mission-section p,
+.experience-section p {
+  line-height: 1.6rem;
+  margin: 2px;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+.education-section .btn-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-section .btn-link {
+  display: inline-block;
+  margin-inline: 100px;
+}
+
+.mission-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  max-width: 800px;
+  text-align: justify;
+}
+
+.mission-section {
+ margin: 25px 20px;
+ margin-top: 15px;
+ padding: 8px 20px;
+ font-weight: 500;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), -3px -3px 10px rgb(0, 0, 0, 0.4);
+}
+
+.mission-header {
+  padding: 0;
+  font-size: 1.0rem;
+}
+
+.experience-section {
+  margin: 25px 20px;
+  margin-top: 15px;
+  padding: 8px 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), -3px -3px 10px rgb(0, 0, 0, 0.4);
+}
+
+.experience-section h3 {
+  margin-block: 10px;
+}
+
+.experience-section ul {
+  list-style-type: none;
+}
+
+.experience-section li {
+  font-size: 1.1rem;
+}
+
 /* MEDIA SCREEN ( MOBILE DEVICE ) */
 @media screen and (max-width: 1100px) {
   .card, .card-dark-mode {
@@ -711,6 +791,8 @@ label {
     height: 190px;
   }
 }
+
+
 @media screen and (max-width: 992px) {
 
   .header {
@@ -757,6 +839,43 @@ label {
 /* Show humburger menu */
 
 @media screen and (max-width: 768px) {
+  .mission-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mission-section,
+  .education-section,
+  .experience-section {
+    margin: 25px 0; 
+  }
+
+  .education-section .btn-section {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .education-section,
+  .mission-section,
+  .experience-section{
+    padding: 20px;
+    width: 100%;
+  }
+
+  .experience-section {
+    align-items: flex-start;
+  }
+
+  .experience-section ul {
+    list-style-type: none;
+    margin-top: 1px;
+    text-align: start;
+  }
+
 
   #hero-section {
     display: flex;
