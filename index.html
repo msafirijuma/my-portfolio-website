@@ -207,20 +207,20 @@
         <section class="contact-off-white-section container-section">
             <h2 class="section-header">Contact</h2>
             <hr class="divider">
-            <form action="">
+            <form action="" method="post" onsubmit="return formValidate();">
                 <div class="form-group">
-                    <label for="" class="form-label">Username</label>
-                    <input type="text" class="form-control" placeholder="Your username">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" placeholder="Your username" id="username" name="username">
                 </div>
                 <div class="form-group">
-                    <label for="" class="form-label">Email</label>
-                    <input type="text" class="form-control" placeholder="Your email">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Your email" id="email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="" class="form-label">Message</label>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Write your message" class="form-control"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message" class="form-control"></textarea>
                 </div>
-                <button class="bt btn-submit">Send</button>
+                <button type="submit" class="btn btn-submit" id="btnSubmit">Send</button>
             </form>
         </section>
     </main>
@@ -267,8 +267,8 @@
             | Msafiri Juma
         </h4>
     </div> 
-
-   <script src="script/script.js"></script>
-   <script src="script/themes.js"></script>
+   <script src="scripts/form.js"></script>
+   <script src="scripts/app.js"></script>
+   <script src="scripts/themes.js"></script>
 </body>
 </html>
