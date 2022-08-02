@@ -1,231 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/0932777f20.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0932777f20.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
     <title>Projects | msafirijuma</title>
-</head>
-<body id="scrollup">
+  </head>
+  <body id="scrollup">
     <header class="header">
-        <h1 class="brand-name">Msafiri Juma</h1>
-        <div class="humburger">
-            <a href="#" class="humburger-link">
-                <i class="fa fa-bars"></i>
-            </a>
+      <h1 class="brand-name">Msafiri Juma</h1>
+      <div class="humburger">
+        <a href="#" class="humburger-link">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <nav class="nav-bar">
+        <ul class="list-group">
+          <li class="list-item">
+            <a href="index.html" class="link">
+              <i class="fa fa-home" style="margin-right: 5px"></i>Home</a
+            >
+          </li>
+          <li class="list-item">
+            <a href="projects.html" class="link active-link">
+              <i class="fa fa-book" style="margin-right: 5px"></i>Projects</a
+            >
+          </li>
+          <li class="list-item">
+            <a href="blogs.html" class="link">
+              <i class="fa fa-blog" style="margin-right: 5px"></i>Blogs</a
+            >
+          </li>
+          <li class="list-item">
+            <a href="about.html" class="link">
+              <i class="fa fa-user" style="margin-right: 5px"></i>About Me</a
+            >
+          </li>
+        </ul>
+        <span class="theme">
+          <i
+            class="fa fa-moon-o"
+            title="Switch to dark mode"
+            id="themeToggler"
+          ></i>
+        </span>
+        <div class="social-medias">
+          <a
+            href="https://twitter.com/Zul_fiqar99"
+            target="_blank"
+            class="link-social"
+          >
+            <i class="link fa fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/msafiri-juma-esmail-817289229"
+            target="_blank"
+            class="link-social"
+          >
+            <i class="link fa fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/msafirijuma" class="link-social">
+            <i class="link fa fa-github"></i>
+          </a>
         </div>
-        <nav class="nav-bar">
-            <ul class="list-group">
-                <li class="list-item">
-                    <a href="index.html" class="link">
-                    <i class="fa fa-home" style="margin-right:5px"></i>Home</a>
-                </li>
-                <li class="list-item">
-                    <a href="projects.html" class="link  active-link">
-                    <i class="fa fa-book" style="margin-right:5px"></i>Projects</a>
-                </li>
-                <li class="list-item">
-                    <a href="blogs.html" class="link">
-                    <i class="fa fa-blog" style="margin-right:5px"></i>Blogs</a>
-                </li>
-                <li class="list-item">
-                    <a href="about.html" class="link">
-                    <i class="fa fa-user" style="margin-right:5px"></i>About Me</a>
-                </li>
-            </ul>
-            <span class="theme">
-                <i class="fa fa-moon-o" title="Switch to dark mode" id="themeToggler"></i>
-            </span>
-            <div class="social-medias">
-                <a href="https://twitter.com/Zul_fiqar99" target="_blank" class="link-social">
-                    <i class="link fa fa-twitter"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/msafiri-juma-esmail-817289229" target="_blank" class="link-social">
-                    <i class="link fa fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/msafirijuma" class="link-social">
-                    <i class="link fa fa-github"></i>
-                </a>
-            </div>
-        </nav>
+      </nav>
     </header>
 
     <main class="main">
-        <section class="off-white-section container-section" id="projects">
-            <h2 class="section-header">My Projects</h2>
-            <hr class="divider">
-            <div class="cards-container">
-                <div class="card">
-                    <img src="images/stone-town-one.jpg" alt="" class="card-img">
-                    <div class="card-body">
-                        <div class="card-title">Zanzibar Island</div>
-                        <p class="card-text">All you need to know about Zanzibar Island is here. This website to showcase about
-                            Zanzibar Island in general such as history,
-                            culture, tours, accomodation, vacation and much more about Zanzibar.</p>
-                        <div class="card-footer">
-                            <button class="btn-project">
-                                <a href="https://zanzibar-island.netlify.app/" class="card-link btn-live-project">
-                                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                                    <span class="text">Go Live</span>
-                                </a>
-                            </button>
-                            <button class="btn-project">
-                                <a href="https://github.com/msafirijuma/zanzibar-island" class="card-link btn-github-project">
-                                    <i class="fa fa-github" aria-hidden="true"></i> <span class="text">View Codes</span>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/verde-chair.jpg" alt="" class="card-img">
-                    <div class="card-body">
-                        <div class="card-title">Fine Furniture</div>
-                        <p class="card-text">I made simple website for Fine Furniture. Fine Furniture deals with making,
-                            desiging, and selling different furniture
-                            for homes, apartment, offices, kitchen and other handcrafted furniture.</p>
-                        <div class="card-footer">
-                            <button class="btn-project">
-                                <a href="https://finefurnituretz.netlify.app/" class="card-link btn-live-project">
-                                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                                    <span class="text">Go Live</span>
-                                </a>
-                            </button>
-                            <button class="btn-project">
-                                <a href="https://github.com/msafirijuma/fine-furniture" class="card-link btn-github-project">
-                                    <i class="fa fa-github" aria-hidden="true"></i> <span class="text">View Codes</span>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/mkumbuu-three.jpg" alt="" class="card-img">
-                    <div class="card-body">
-                        <div class="card-title">Do You Know Me App</div>
-                        <p class="card-text">This is fun app to test what you know about me. The quiz is composed of multiple
-                            questions and you need to answer all of
-                            them to gain some marks.</p>
-                        <div class="card-footer">
-                            <button class="btn-project">
-                                <a href="https://replit.com/@msafirijesmail/You-Know-Me-CLI-App#index.js?embed=1&output=1"
-                                    class="card-link btn-live-project">
-                                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                                    <span class="text">Go Live</span>
-                                </a>
-                            </button>
-                            <button class="btn-project">
-                                <a href="https://github.com/msafirijuma/you-know-me-cli-app"
-                                    class="card-link btn-github-project">
-                                    <i class="fa fa-github" aria-hidden="true"></i> <span class="text">View Codes</span>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/tanzania-mount-kilimanjaro.jpg" alt="" class="card-img">
-                    <div class="card-body">
-                        <div class="card-title">Tanzania CLI Quiz</div>
-                        <p class="card-text">A Tanzania CLI quiz app to test your knowledge based on what you know about our
-                            history, cultures, and other interesting
-                            cross cutting issues of Tanzania.</p>
-                        <div class="card-footer">
-                            <button class="btn-project">
-                                <a href="https://replit.com/@msafirijesmail/TANZANIA-CLI-APP#index.js?embed=1&output=1"
-                                    class="card-link btn-live-project">
-                                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                                    <span class="text">Go Live</span>
-                                </a>
-                            </button>
-                            <button class="btn-project">
-                                <a href="https://github.com/msafirijuma/tanzania-cli-app" class="card-link btn-github-project">
-                                    <i class="fa fa-github" aria-hidden="true"></i> <span class="text">View Codes</span>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/tanzania-mount-kilimanjaro.jpg" alt="" class="card-img">
-                    <div class="card-body">
-                        <div class="card-title">Tribute Page</div>
-                        <p class="card-text">Tribute page made to those who have invented ideas which revolutionalize the world. This tribute website to showcase what they created and which we've benefitted from their works, studies and practical presentations. Check some Scholars and Tech giants of our time.</p>
-                        <div class="card-footer">
-                            <button class="btn-project">
-                                <a href="https://web-tribute.netlify.app/"
-                                    class="card-link btn-live-project">
-                                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                                    <span class="text">Go Live</span>
-                                </a>
-                            </button>
-                            <button class="btn-project">
-                                <a href="https://github.com/msafirijuma/tribute-website" class="card-link btn-github-project">
-                                    <i class="fa fa-github" aria-hidden="true"></i> <span class="text">View Codes</span>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/tanzania-mount-kilimanjaro.jpg" alt="" class="card-img">
-                    <div class="card-body">
-                        <div class="card-title">ATM App</div>
-                        <p class="card-text">A simple ATM app to showcase day to day transactions within a bank system, built with <b>NodeJS. </b>User can create an account, desposit and withdraw some money to and from an account and also checking account balance.</p>
-                        <div class="card-footer">
-                            <button class="btn-project">
-                                <a href="https://replit.com/@msafirijesmail/ATM-APP-FINAL#index.js"
-                                    class="card-link btn-live-project">
-                                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                                    <span class="text">Go Live</span>
-                                </a>
-                            </button>
-                            <button class="btn-project">
-                                <a href="https://github.com/msafirijuma/atm-app" class="card-link btn-github-project">
-                                    <i class="fa fa-github" aria-hidden="true"></i> <span class="text">View Codes</span>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <section class="off-white-section container-section" id="projects">
+        <h2 class="section-header">My Projects</h2>
+        <hr class="divider" />
+        <div class="cards-container">
+          <div class="card">
+            <img src="images/stone-town-one.jpg" alt="" class="card-img" />
+            <div class="card-body">
+              <div class="card-title">Zanzibar Island</div>
+              <p class="card-text">
+                All you need to know about Zanzibar Island is here. This website
+                to showcase about Zanzibar Island in general such as history,
+                culture, tours, accomodation, vacation and much more about
+                Zanzibar.
+              </p>
+              <div class="card-footer">
+                <button class="btn-project">
+                  <a
+                    href="https://zanzibar-island.netlify.app/"
+                    class="card-link btn-live-project"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <span class="text">Go Live</span>
+                  </a>
+                </button>
+                <button class="btn-project">
+                  <a
+                    href="https://github.com/msafirijuma/zanzibar-island"
+                    class="card-link btn-github-project"
+                  >
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <span class="text">View Codes</span>
+                  </a>
+                </button>
+              </div>
             </div>
-        </section>
-
+          </div>
+          <div class="card">
+            <img src="images/verde-chair.jpg" alt="" class="card-img" />
+            <div class="card-body">
+              <div class="card-title">Fine Furniture</div>
+              <p class="card-text">
+                I made simple website for Fine Furniture. Fine Furniture deals
+                with making, desiging, and selling different furniture for
+                homes, apartment, offices, kitchen and other handcrafted
+                furniture.
+              </p>
+              <div class="card-footer">
+                <button class="btn-project">
+                  <a
+                    href="https://finefurnituretz.netlify.app/"
+                    class="card-link btn-live-project"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <span class="text">Go Live</span>
+                  </a>
+                </button>
+                <button class="btn-project">
+                  <a
+                    href="https://github.com/msafirijuma/fine-furniture"
+                    class="card-link btn-github-project"
+                  >
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <span class="text">View Codes</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/mkumbuu-three.jpg" alt="" class="card-img" />
+            <div class="card-body">
+              <div class="card-title">Do You Know Me App</div>
+              <p class="card-text">
+                This is fun app to test what you know about me. The quiz is
+                composed of multiple questions and you need to answer all of
+                them to gain some marks.
+              </p>
+              <div class="card-footer">
+                <button class="btn-project">
+                  <a
+                    href="https://replit.com/@msafirijesmail/You-Know-Me-CLI-App#index.js?embed=1&output=1"
+                    class="card-link btn-live-project"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <span class="text">Go Live</span>
+                  </a>
+                </button>
+                <button class="btn-project">
+                  <a
+                    href="https://github.com/msafirijuma/you-know-me-cli-app"
+                    class="card-link btn-github-project"
+                  >
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <span class="text">View Codes</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="images/tanzania-mount-kilimanjaro.jpg"
+              alt=""
+              class="card-img"
+            />
+            <div class="card-body">
+              <div class="card-title">Tanzania CLI Quiz</div>
+              <p class="card-text">
+                A Tanzania CLI quiz app to test your knowledge based on what you
+                know about our history, cultures, and other interesting cross
+                cutting issues of Tanzania.
+              </p>
+              <div class="card-footer">
+                <button class="btn-project">
+                  <a
+                    href="https://replit.com/@msafirijesmail/TANZANIA-CLI-APP#index.js?embed=1&output=1"
+                    class="card-link btn-live-project"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <span class="text">Go Live</span>
+                  </a>
+                </button>
+                <button class="btn-project">
+                  <a
+                    href="https://github.com/msafirijuma/tanzania-cli-app"
+                    class="card-link btn-github-project"
+                  >
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <span class="text">View Codes</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="images/tanzania-mount-kilimanjaro.jpg"
+              alt=""
+              class="card-img"
+            />
+            <div class="card-body">
+              <div class="card-title">Tribute Page</div>
+              <p class="card-text">
+                Tribute page made to those who have invented ideas which
+                revolutionalize the world. This tribute website to showcase what
+                they created and which we've benefitted from their works,
+                studies and practical presentations. Check some Scholars and
+                Tech giants of our time.
+              </p>
+              <div class="card-footer">
+                <button class="btn-project">
+                  <a
+                    href="https://web-tribute.netlify.app/"
+                    class="card-link btn-live-project"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <span class="text">Go Live</span>
+                  </a>
+                </button>
+                <button class="btn-project">
+                  <a
+                    href="https://github.com/msafirijuma/tribute-website"
+                    class="card-link btn-github-project"
+                  >
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <span class="text">View Codes</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="images/tanzania-mount-kilimanjaro.jpg"
+              alt=""
+              class="card-img"
+            />
+            <div class="card-body">
+              <div class="card-title">ATM App</div>
+              <p class="card-text">
+                A simple ATM app to showcase day to day transactions within a
+                bank system, built with <b>NodeJS. </b>User can create an
+                account, desposit and withdraw some money to and from an account
+                and also checking account balance.
+              </p>
+              <div class="card-footer">
+                <button class="btn-project">
+                  <a
+                    href="https://replit.com/@msafirijesmail/ATM-APP-FINAL#index.js"
+                    class="card-link btn-live-project"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    <span class="text">Go Live</span>
+                  </a>
+                </button>
+                <button class="btn-project">
+                  <a
+                    href="https://github.com/msafirijuma/atm-app"
+                    class="card-link btn-github-project"
+                  >
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <span class="text">View Codes</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    
 
     <footer class="footer social container">
-        <h2>Let's Connect</h2>
-        <hr class="divider divider-header">
-        <br>
-        <ul class="list-group">
-            <li class="list-item"><a href="https://twitter.com/Zul_fiqar99" class="link fa fa-twitter" target="_blank"></a></li>
-            <li  class="list-item"><a href="https://www.linkedin.com/in/msafiri-juma-esmail-817289229" class="link fa fa-linkedin" target="_blank"></a></li>
-            <li  class="list-item"><a href="https://github.com/msafirijuma"  class="link fa fa-github" target="_blank"></a></li>
-            <li class="list-item"><a href="https://wa.me/255626326474" class="link fa fa-whatsapp"></a></li>
-        </ul>
-        <span id="scrolltop">
-            <a href="#scrollup" title="back to the top">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </span>
+      <h2>Let's Connect</h2>
+      <hr class="divider divider-header" />
+      <br />
+      <ul class="list-group">
+        <li class="list-item">
+          <a
+            href="https://twitter.com/Zul_fiqar99"
+            class="link fa fa-twitter"
+            target="_blank"
+          ></a>
+        </li>
+        <li class="list-item">
+          <a
+            href="https://www.linkedin.com/in/msafiri-juma-esmail-817289229"
+            class="link fa fa-linkedin"
+            target="_blank"
+          ></a>
+        </li>
+        <li class="list-item">
+          <a
+            href="https://github.com/msafirijuma"
+            class="link fa fa-github"
+            target="_blank"
+          ></a>
+        </li>
+        <li class="list-item">
+          <a href="https://wa.me/255626326474" class="link fa fa-whatsapp"></a>
+        </li>
+      </ul>
+      <span id="scrolltop">
+        <a href="#scrollup" title="back to the top">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+      </span>
     </footer>
 
     <!-- Copyright Section -->
     <div class="copyright">
-        <h4 class="copyright">Copyright &copy;
-            <script>
-                var year = new Date();
-                document.write(year.getFullYear())
-            </script>
-            | Msafiri Juma
-        </h4>
+      <h4 class="copyright">
+        Copyright &copy;
+        <script>
+          var year = new Date();
+          document.write(year.getFullYear());
+        </script>
+        | Msafiri Juma
+      </h4>
     </div>
-    <script src="script/app.js"></script>
-    <script src="script/themes.js"></script>
-</body>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/themes.js"></script>
+  </body>
 </html>

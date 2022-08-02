@@ -2,6 +2,7 @@ const themeToggler = document.querySelector("#themeToggler");
 const sectionHeaders = document.querySelectorAll(".section-header");
 const labels = document.querySelectorAll(".form-label");
 const cards = document.querySelectorAll(".card")
+let darkMode = localStorage.getItem("dark-mode")
 
 
 // Toggle Black Text Color (Dark Mode)
@@ -51,7 +52,14 @@ const toggleTextColorLight = () => {
 const toggleDarkMode = () => {
     themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
+    let contactOffWhiteContainer = document.querySelector(".contact-off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
+
+    if (contactOffWhiteContainer.classList.contains("contact-off-white-section")) {
+        contactOffWhiteContainer.classList.replace("contact-off-white-section", "contact-off-white-dark-mode");
+    } else {
+        contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section");
+    }
 
     for (let offWhiteContainer of offWhiteContainers) {
         if (offWhiteContainer.classList.contains("off-white-section")) {
@@ -77,14 +85,22 @@ const toggleDarkMode = () => {
         }
     }
 
+    localStorage.setItem("dark-mode", "enabled")
 }
 
 
 // Light Mode
 const toggleLightMode = () => {
     themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
+    let contactOffWhiteContainer = document.querySelector(".contact-off-white-dark-mode");
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
+
+    if (contactOffWhiteContainer.classList.contains("contact-off-white-dark-mode")) {
+        contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section");
+    } else {
+        contactOffWhiteContainer.classList.replace("contact-off-white-section", "contact-off-white-dark-mode");
+    }
 
     for (let offWhiteContainer of offWhiteContainers) {
         if (offWhiteContainer.classList.contains("off-white-dark-mode")) {
@@ -98,7 +114,7 @@ const toggleLightMode = () => {
         if (coloredContainer.classList.contains("colored-container-dark-mode")) {
             coloredContainer.classList.replace("colored-container-dark-mode", "container");
         } else {
-            coloredContainer.classList.replace("container","colored-container-dark-mode");
+            coloredContainer.classList.replace("container", "colored-container-dark-mode");
         }
     }
 
@@ -110,12 +126,19 @@ const toggleLightMode = () => {
         }
     }
 
+    localStorage.setItem("dark-mode", "disabled")
+}
+
+if (darkMode == "enabled") {
+    toggleDarkMode();
 }
 
 
 // Dark AND Light Toggler
 themeToggler.addEventListener("click", () => {
-    if (themeToggler.classList.contains("fa-moon-o") && (themeToggler.title)) {
+    darkMode = localStorage.getItem("dark-mode");
+
+    if (darkMode === "disabled") {
         toggleDarkMode();
         toggleTextColorDark();
         themeToggler.title = "Switch to light mode"
@@ -124,9 +147,19 @@ themeToggler.addEventListener("click", () => {
         toggleTextColorLight();
         themeToggler.title = "Switch to dark mode"
     }
+
+    // if (themeToggler.classList.contains("fa-moon-o") && (themeToggler.title)) {
+    //     toggleDarkMode();
+    //     toggleTextColorDark();
+    //     themeToggler.title = "Switch to light mode"
+    // } else {
+    //     toggleLightMode();
+    //     toggleTextColorLight();
+    //     themeToggler.title = "Switch to dark mode"
+    // }
     document.body.classList.toggle("dark");
-    
-    //  window.location = "../index.html"
+
+    window.location.reload();
 })
 
 
@@ -134,12 +167,12 @@ themeToggler.addEventListener("click", () => {
 const header = document.querySelector(".header");
 const scrolltop = document.querySelector("#scrolltop");
 window.addEventListener("scroll", () => {
-    
+
     if (window.document.documentElement.scrollTop >= 100) {
         header.classList.add("navbar-scroll");
         scrolltop.style.visibility = "visible"
     } else {
         header.classList.remove("navbar-scroll");
-         scrolltop.style.visibility = "hidden"
+        scrolltop.style.visibility = "hidden"
     }
 })
