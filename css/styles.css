@@ -410,10 +410,17 @@ body::after {
 }
 
 .section-header, .section-header-dark-mode {
-  color: #111;
   padding: 6px 4px;
   font-size: 2.5rem;
   font-weight: 500;
+}
+
+.section-header {
+  color: var(--bg-off-white-dark-mode);
+}
+
+.section-header-dark-mode {
+  color: var(--text-white-color);
 }
 
 
@@ -1105,12 +1112,9 @@ label {
 .off-white-dark-mode,
 .contact-off-white-dark-mode {
   background-color: var(--bg-off-white-dark-mode);
-  background-color: green;
-  color: magenta;
   color: var(--dark-mode-text-color);
 }
 
-.section-header-dark-mode,
 .form-label-dark-mode
 {
   color: var(--dark-mode-text-color) !important;

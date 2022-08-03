@@ -52,6 +52,13 @@ const toggleDarkMode = () => {
     themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
+    let contactOffWhiteContainer = document.querySelector(".contact-off-white-section")
+
+    if (contactOffWhiteContainer.classList.contains("contact-off-white-section")) {
+        contactOffWhiteContainer.classList.replace("contact-off-white-section", "contact-off-white-dark-mode");
+    } else {
+        contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section")
+    }
 
     for (let offWhiteContainer of offWhiteContainers) {
         if (offWhiteContainer.classList.contains("off-white-section")) {
@@ -86,6 +93,13 @@ const toggleLightMode = () => {
     themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
+    let contactOffWhiteContainer = document.querySelector(".contact-off-white-dark-mode");
+
+    if (contactOffWhiteContainer.classList.contains("contact-off-white-dark-mode")) {
+        contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section");
+    } else {
+        contactOffWhiteContainer.classList.replace("contact-off-white-section", "contact-off-white-dark-mode");
+    }
 
     for (let offWhiteContainer of offWhiteContainers) {
         if (offWhiteContainer.classList.contains("off-white-dark-mode")) {
@@ -123,7 +137,7 @@ if (darkMode == "enabled") {
 themeToggler.addEventListener("click", () => {
     darkMode = localStorage.getItem("dark-mode");
 
-    if (darkMode === "disabled" && themeToggler.title) {
+    if (darkMode === "disabled") {
         toggleDarkMode();
         toggleTextColorDark();
         themeToggler.title = "Switch to light mode"
