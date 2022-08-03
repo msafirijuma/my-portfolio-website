@@ -1105,6 +1105,8 @@ label {
 .off-white-dark-mode,
 .contact-off-white-dark-mode {
   background-color: var(--bg-off-white-dark-mode);
+  background-color: green;
+  color: magenta;
   color: var(--dark-mode-text-color);
 }
 

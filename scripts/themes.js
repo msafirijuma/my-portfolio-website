@@ -22,7 +22,7 @@ const toggleTextColorDark = () => {
             label.classList.replace("form-label-dark-mode", "form-label")
         }
     }
-
+    localStorage.setItem("dark-mode", "enabled")
 }
 
 
@@ -43,22 +43,21 @@ const toggleTextColorLight = () => {
             label.classList.replace("form-label", "form-label-dark-mode")
         }
     }
-
+    localStorage.setItem("dark-mode", "disabled")
 }
-
 
 
 // Dark Mode
 const toggleDarkMode = () => {
     themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
-    let contactOffWhiteContainer = document.querySelector(".contact-off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
+    let contactOffWhiteContainer = document.querySelector(".contact-off-white-section")
 
     if (contactOffWhiteContainer.classList.contains("contact-off-white-section")) {
         contactOffWhiteContainer.classList.replace("contact-off-white-section", "contact-off-white-dark-mode");
     } else {
-        contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section");
+        contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section")
     }
 
     for (let offWhiteContainer of offWhiteContainers) {
@@ -92,9 +91,9 @@ const toggleDarkMode = () => {
 // Light Mode
 const toggleLightMode = () => {
     themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
-    let contactOffWhiteContainer = document.querySelector(".contact-off-white-dark-mode");
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
+    let contactOffWhiteContainer = document.querySelector(".contact-off-white-dark-mode");
 
     if (contactOffWhiteContainer.classList.contains("contact-off-white-dark-mode")) {
         contactOffWhiteContainer.classList.replace("contact-off-white-dark-mode", "contact-off-white-section");
@@ -130,9 +129,8 @@ const toggleLightMode = () => {
 }
 
 if (darkMode == "enabled") {
-    toggleDarkMode();
+    toggleDarkMode();        // toggle default when page loads
 }
-
 
 // Dark AND Light Toggler
 themeToggler.addEventListener("click", () => {
