@@ -49,7 +49,7 @@ const toggleTextColorLight = () => {
 
 // Dark Mode
 const toggleDarkMode = () => {
-    themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
+    themeToggler.classList.replace("fa-moon", "fa-sun");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
 
@@ -83,7 +83,7 @@ const toggleDarkMode = () => {
 
 // Light Mode
 const toggleLightMode = () => {
-    themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
+    themeToggler.classList.replace("fa-sun", "fa-moon")
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
 

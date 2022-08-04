@@ -127,11 +127,11 @@ body::after {
 }
 
 /* HUMBERGER ICON */
-.humburger {
+.hamburger {
   display: none;
 }
 
-.humburger-link {
+.hamburger-link {
   color: #fefefe;
 }
 
@@ -148,7 +148,7 @@ body::after {
   color: var(--off-white);
   text-decoration: none;
   font-weight: 100;
-  margin: 20px 8px;
+  margin: 15px 5px;
 }
 
 .social-medias .fa {
@@ -275,8 +275,8 @@ body::after {
 }
  
 #about-footer {
-  border-top: 2px solid turquoise;
-}
+  border-top: 1px solid turquoise;
+} 
 
 .footer {
   color: var(--text-white-color);
@@ -803,7 +803,7 @@ label {
 }
 
 /* MEDIA SCREEN ( MOBILE DEVICE ) */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 992px) {
   .card, .card-dark-mode {
     margin: 1rem 0;
   }
@@ -811,7 +811,7 @@ label {
   .cards-container .card .card-img, 
   .cards-container .card-dark-mode .card-img {
     object-fit: cover;
-    height: 350px;
+    height: 300px;
   }
 
   .card-footer .btn-project {
@@ -829,7 +829,7 @@ label {
 }
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
 
   .header {
     display: flex;
@@ -858,13 +858,14 @@ label {
     font-size: 1.5rem;
   }
 
-  .header .theme .fa {
+  .header .theme .fa-solid {
     color: white;
     font-size: 2rem;
   }
 
-  .card, .card-dark-mode {
-    width: 335px;
+  .cards-container .card,
+    .cards-container .card-dark-mode {
+      width: 500px;
   }
 
   .contact-off-white-section form {
@@ -872,9 +873,9 @@ label {
   }
 }
 
-/* Show humburger menu */
+/* Show hamburger menu */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .my-image {
     width: 180px;
     height: 180px;
@@ -950,8 +951,9 @@ label {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: -3.75rem;
+    padding: 0;
   }
+
   #projects {
     padding-top: 20px;
   }
@@ -959,15 +961,18 @@ label {
   .cards-container {
     padding: 15px;
   }
-  .cards-container .card, .cards-container .card-dark-mode {
+
+  .cards-container .card, 
+  .cards-container .card-dark-mode {
     width: 100%;
     margin: 1rem 0;
   }
 
-  .cards-container  .card-img {
+  .cards-container .card .card-img,
+  .cards-container .card-dark-mode .card-img {
     object-fit: cover;
     width: 100%;
-    height: 230px;
+    height: 200px !important;
   }
 
   /* Image in mobile screens */
@@ -979,24 +984,27 @@ label {
     font-size: 1.2rem;
     height: auto;
   }
+
   .my-image {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     margin: 10px auto;
   }
+
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 5px 10px;
+    padding: 4px 10px;
   }
+
   .brand-name {
     font-size: 2rem;
     margin-top: 10px;
   }
-  .humburger {
+  .hamburger {
     display: block;
     position: relative;
     right: 3px;
@@ -1004,19 +1012,19 @@ label {
     margin-top: -9px;
   }
 
-  .humburger-link {
+  .hamburger-link {
     font-size: 2rem;
     text-decoration: none;
   }
 
-  .humburger-link:hover {
+  .hamburger-link:hover {
     color: #fefefe;
   }
 
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 108px;
+    top: 85px;
     left: 0;
     right: 0;
     background-color: var(--secondary-focus);
@@ -1029,8 +1037,8 @@ label {
   .nav-bar.active {
     height: 100vh;
     justify-content: flex-start;
-    padding-top: 50px;
-    border-top: 2px solid var(--dark-mode-text-color);
+    padding-top: 25px;
+    border-top: 1px solid var(--dark-mode-text-color);
   }
 
   .nav-bar .list-group {
@@ -1040,8 +1048,8 @@ label {
     text-align: center;
     flex-direction: column;
     margin: 0rem 1rem 4px;
-    margin-bottom: 0.2rem;
-    padding: 1.5rem 2rem;
+    margin-bottom: -2px;
+    padding: 1.2rem 2rem;
     border-left: 6px solid var(--off-white);
     border-right: 6px solid var(--off-white);
     border-radius: 100%;
@@ -1067,7 +1075,7 @@ label {
   .theme {
     display: flex;
     margin-block: 22px 10px;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
   }
 
   .form {
@@ -1082,9 +1090,9 @@ label {
     font-size: 2rem;
   }
 
-    #about-footer {
-      border-top: 2px solid turquoise;
-    }
+  #about-footer {
+    border-top: 2px solid turquoise;
+  }
 }
 
 
@@ -1104,12 +1112,12 @@ label {
   color: #fff;
 }
 
-.header .theme .fa {
+.header .theme .fa-solid {
   color: white;
   font-size: 2.2rem;
 }
 
-.header .theme .fa:hover {
+.header .theme .fa-solid:hover {
   cursor: pointer;
 }
 
@@ -1148,5 +1156,6 @@ label {
 
 .mission-header {
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
