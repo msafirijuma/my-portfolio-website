@@ -2,6 +2,10 @@ const themeToggler = document.querySelector("#themeToggler");
 const sectionHeaders = document.querySelectorAll(".section-header");
 const labels = document.querySelectorAll(".form-label");
 const cards = document.querySelectorAll(".card")
+const twitters = document.querySelectorAll(".fa-twitter");
+const linkedins = document.querySelectorAll(".fa-linkedin");
+const githubs = document.querySelectorAll(".fa-github");
+const whatsapps = document.querySelectorAll(".fa-whatsapp");
 let darkMode = localStorage.getItem("dark-mode")
 
 
@@ -22,6 +26,39 @@ const toggleTextColorDark = () => {
             label.classList.replace("form-label-dark-mode", "form-label")
         }
     }
+
+    for (let twitter of twitters) {
+        if (twitter.classList.contains("fa-twitter")) {
+            twitter.classList.add("fa-social-dark-mode")
+        } else {
+            twitter.classList.remove("fa-social-dark-mode");
+        }
+    }
+
+    for (let linkedin of linkedins) {
+        if (linkedin.classList.contains("fa-linkedin")) {
+            linkedin.classList.add("fa-social-dark-mode")
+        } else {
+            linkedin.classList.remove("fa-social-dark-mode");
+        }
+    }
+
+    for (let github of githubs) {
+        if (github.classList.contains("fa-github")) {
+            github.classList.add("fa-social-dark-mode")
+        } else {
+            github.classList.remove("fa-social-dark-mode");
+        }
+    }
+
+    for (let whatsapp of whatsapps) {
+        if (whatsapp.classList.contains("fa-whatsapp")) {
+            whatsapp.classList.add("fa-social-dark-mode")
+        } else {
+            whatsapp.classList.remove("fa-social-dark-mode");
+        }
+    }
+
     localStorage.setItem("dark-mode", "enabled")
 }
 
@@ -43,13 +80,14 @@ const toggleTextColorLight = () => {
             label.classList.replace("form-label", "form-label-dark-mode")
         }
     }
+
     localStorage.setItem("dark-mode", "disabled")
 }
 
 
 // Dark Mode
 const toggleDarkMode = () => {
-    themeToggler.classList.replace("fa-moon", "fa-sun");
+    themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
     let contactOffWhiteContainer = document.querySelector(".contact-off-white-section")
@@ -90,7 +128,7 @@ const toggleDarkMode = () => {
 
 // Light Mode
 const toggleLightMode = () => {
-    themeToggler.classList.replace("fa-sun", "fa-moon")
+    themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
     let contactOffWhiteContainer = document.querySelector(".contact-off-white-dark-mode");

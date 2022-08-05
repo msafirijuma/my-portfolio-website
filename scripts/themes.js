@@ -3,6 +3,10 @@ const sectionHeaders = document.querySelectorAll(".section-header");
 const labels = document.querySelectorAll(".form-label");
 const cards = document.querySelectorAll(".card")
 let darkMode = localStorage.getItem("dark-mode")
+const twitters = document.querySelectorAll(".fa-twitter");
+const linkedins = document.querySelectorAll(".fa-linkedin");
+const githubs = document.querySelectorAll(".fa-github");
+const whatsapps = document.querySelectorAll(".fa-whatsapp");
 
 
 // Toggle Black Text Color (Dark Mode)
@@ -22,6 +26,40 @@ const toggleTextColorDark = () => {
             label.classList.replace("form-label-dark-mode", "form-label")
         }
     }
+
+
+    for (let twitter of twitters) {
+        if (twitter.classList.contains("fa-twitter")) {
+            twitter.classList.add("fa-social-dark-mode")
+        } else {
+            twitter.classList.remove("fa-social-dark-mode");
+        }
+    }
+
+    for (let linkedin of linkedins) {
+        if (linkedin.classList.contains("fa-linkedin")) {
+            linkedin.classList.add("fa-social-dark-mode")
+        } else {
+            linkedin.classList.remove("fa-social-dark-mode");
+        }
+    }
+
+    for (let github of githubs) {
+        if (github.classList.contains("fa-github")) {
+            github.classList.add("fa-social-dark-mode")
+        } else {
+            github.classList.remove("fa-social-dark-mode");
+        }
+    }
+
+    for (let whatsapp of whatsapps) {
+        if (whatsapp.classList.contains("fa-whatsapp")) {
+            whatsapp.classList.add("fa-social-dark-mode")
+        } else {
+            whatsapp.classList.remove("fa-social-dark-mode");
+        }
+    }
+
     localStorage.setItem("dark-mode", "enabled")
 }
 
@@ -49,7 +87,7 @@ const toggleTextColorLight = () => {
 
 // Dark Mode
 const toggleDarkMode = () => {
-    themeToggler.classList.replace("fa-moon", "fa-sun");
+    themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
 
@@ -83,7 +121,7 @@ const toggleDarkMode = () => {
 
 // Light Mode
 const toggleLightMode = () => {
-    themeToggler.classList.replace("fa-sun", "fa-moon")
+    themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
 

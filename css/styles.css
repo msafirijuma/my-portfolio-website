@@ -189,6 +189,16 @@ body::after {
   background-color: white;
 }
 
+.social-medias .fa-whatsapp {
+  color: white;
+  background-color: #25d366;
+}
+
+.social-medias .fa-whatsapp:hover {
+  color: white;
+  background-color: #128c7e;
+}
+
 .social-medias .fa:hover {
   opacity: 0.9;
 }
@@ -272,6 +282,7 @@ body::after {
 .social {
   background-color: var(--secondary-focus);
   padding: 20px;
+  text-align: center;
 }
  
 #about-footer {
@@ -282,14 +293,6 @@ body::after {
   color: var(--text-white-color);
 }
 
-.footer .list-group {
-  list-style-type: none;
-  text-align: center;
-  padding: 0.6rem;
-  margin: -15px;
-  margin-bottom: 3px;
-}
-
 .footer .link {
   color: var(--off-white);
   text-decoration: none;
@@ -297,71 +300,10 @@ body::after {
   margin: 2px;
 }
 
-.footer .list-group .list-item {
-  display: inline-block;
-}
-
-.social {
-  text-align: center;
-}
-
 .social .link {
-  padding: 3px;
-} 
-
-
-.social .list-group .list-item .fa {
-  padding: 8px;
-  font-size: 1.5rem;
-  text-align: center;
+  padding: 16px;
+  font-size: 1.6rem;
   border-radius: 50%;
-}
-
-
-.social .list-group .list-item .fa-twitter {
-  color: #fff;
-  background-color: #00acee;
-}
-
-.social .list-group .list-item .fa-twitter:hover {
-  color: #00acee;
-  background-color: #fff;
-}
-
-
- 
-.social .list-group .list-item .fa-linkedin {
-  color: white;
-  background-color: #0e76a8;
-}
-
-.social .list-group .list-item .fa-linkedin:hover {
-  color: #0e76a8;
-  background-color: white;
-}
-
-.social .list-group .list-item .fa-github {
-  color: black;
-  background-color: white;
-}
-
-.social .list-group .list-item .fa-github:hover {
-  color: white;
-  background-color: black;
-}
-
-.social .list-group .list-item .fa-whatsapp {
-  color: white;
-  background-color: #25d366;
-}
-
-.social .list-group .list-item .fa-whatsapp:hover {
-  color: white;
-  background-color: #128c7e;
-}
-
-.social .list-group .list-item .fa:hover {
-  opacity: 0.9;
 }
 
 #scrolltop {
@@ -858,7 +800,7 @@ label {
     font-size: 1.5rem;
   }
 
-  .header .theme .fa-solid {
+  .header .theme .fa {
     color: white;
     font-size: 2rem;
   }
@@ -1034,7 +976,9 @@ label {
     height: 0; /* hide the height */
     overflow: hidden; /* overflow to not display content and their action otherwise the hamberger menu is activated */
   }
+  
   .nav-bar.active {
+    margin-block: -7px;
     height: 100vh;
     justify-content: flex-start;
     padding-top: 25px;
@@ -1112,12 +1056,12 @@ label {
   color: #fff;
 }
 
-.header .theme .fa-solid {
+.header .theme .fa {
   color: white;
   font-size: 2.2rem;
 }
 
-.header .theme .fa-solid:hover {
+.header .theme .fa:hover {
   cursor: pointer;
 }
 
@@ -1149,6 +1093,12 @@ label {
   color: var(--dark-mode-text-color);
 }
 
+.social-medias .fa-social-dark-mode {
+  color: var(--text-white-color);
+  background-color: var(--text-dark-color);
+  border: 1px solid var(--text-white-color);
+}
+
 .fa .fa-times {
   font-size: 1.9rem;
   transition: all 2.5s ease-in-out;
@@ -1159,3 +1109,4 @@ label {
   font-size: 1.6rem;
   font-weight: 500;
 }
+
