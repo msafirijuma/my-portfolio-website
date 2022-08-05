@@ -261,19 +261,27 @@ body::after {
   font-size: 1.4rem;
 }
 
-#hero-section .btn-contact-me{
+#hero-section .btn-contact-me, #hero-section .btn-contact-me-dark-mode{
   width: 80%;
   display: flex;
   justify-content: center;
   padding: 8px 10px;
   height: auto;
   border-radius: 10px;
-  background-color: var(--secondary-focus);
   text-align: center;
   font-size: 20px;
 }
 
+#hero-section .btn-contact-me {
+  background-color: var(--secondary-focus);
+}
+
 #hero-section .btn-contact-me a {
+  text-decoration: none;
+  color: var(--dark-mode-text-color);
+}
+
+#hero-section .btn-contact-me-dark-mode a {
   text-decoration: none;
   color: var(--dark-mode-text-color);
 }
@@ -1110,3 +1118,12 @@ label {
   font-weight: 500;
 }
 
+.btn-dark-mode {
+  color: white;
+  background-color: black;
+}
+
+.btn-contact-me-dark-mode {
+  color: white;
+  background-color: black;
+}

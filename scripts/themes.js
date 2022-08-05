@@ -7,6 +7,8 @@ const twitters = document.querySelectorAll(".fa-twitter");
 const linkedins = document.querySelectorAll(".fa-linkedin");
 const githubs = document.querySelectorAll(".fa-github");
 const whatsapps = document.querySelectorAll(".fa-whatsapp");
+const btnAll = document.querySelectorAll(".btn");
+const btnContact = document.querySelector(".btn-contact-me");
 
 
 // Toggle Black Text Color (Dark Mode)
@@ -27,6 +29,10 @@ const toggleTextColorDark = () => {
         }
     }
 
+    localStorage.setItem("dark-mode", "enabled")
+}
+
+const toggleSocialDarkMode = () => {
 
     for (let twitter of twitters) {
         if (twitter.classList.contains("fa-twitter")) {
@@ -63,6 +69,31 @@ const toggleTextColorDark = () => {
     localStorage.setItem("dark-mode", "enabled")
 }
 
+const toggleSocialLightMode = () => {
+    localStorage.setItem("dark-mode", "disabled")
+}
+
+const toggleBtnDarkMode = () => {
+    for (let btn of btnAll) {
+        if (btn.classList.contains("btn")) {
+            btn.classList.add("btn-dark-mode");
+        } else {
+            btn.classList.remove("btn-dark-mode");
+        }
+    }
+
+    if (btnContact.classList.contains("btn-contact-me")) {
+        btnContact.classList.replace("btn-contact-me", "btn-contact-me-dark-mode");
+    } else {
+        btnContact.classList.replace("btn-contact-me-dark-mode", "btn-contact-me");
+    }
+
+    localStorage.setItem("dark-mode", "enabled")
+}
+
+const toggleBtnLightMode = () => {
+    localStorage.setItem("dark-mode", "disabled")
+}
 
 // Toggle White Text Color (Dark Mode)
 const toggleTextColorLight = () => {
@@ -154,6 +185,8 @@ const toggleLightMode = () => {
 
 if (darkMode == "enabled") {
     toggleDarkMode();
+    toggleBtnDarkMode();
+    toggleSocialDarkMode();
     toggleTextColorDark();     // toggle default when page loads
 }
 
@@ -164,10 +197,14 @@ themeToggler.addEventListener("click", () => {
     if (darkMode === "disabled" && themeToggler.title) {
         toggleDarkMode();
         toggleTextColorDark();
+        toggleBtnDarkMode();
+        toggleSocialDarkMode();
         themeToggler.title = "Switch to light mode"
     } else {
         toggleLightMode();
         toggleTextColorLight();
+        toggleBtnLightMode();
+        toggleSocialLightMode();
         themeToggler.title = "Switch to dark mode"
     }
 
