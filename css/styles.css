@@ -1128,3 +1128,7 @@ label {
   color: var(--text-white-color);
   background-color: var(--bg-off-white-dark-mode);
 }
+
+.header-dark-mode {
+  background-color: var(--dark-mode);
+}

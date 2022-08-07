@@ -7,6 +7,7 @@ const linkedins = document.querySelectorAll(".fa-linkedin");
 const githubs = document.querySelectorAll(".fa-github");
 const whatsapps = document.querySelectorAll(".fa-whatsapp");
 const btnAll = document.querySelectorAll(".btn");
+const header = document.querySelector(".header");
 let darkMode = localStorage.getItem("dark-mode")
 
 
@@ -146,6 +147,12 @@ const toggleDarkMode = () => {
         }
     }
 
+    if (header.classList.contains("header")) {
+        header.classList.add("header-dark-mode")
+    } else {
+        header.classList.remove("header-dark-mode");
+    }
+
     localStorage.setItem("dark-mode", "enabled")
 }
 
@@ -231,15 +238,15 @@ themeToggler.addEventListener("click", () => {
 
 
 // Navbar Scroll AND chevron-up icon
-const header = document.querySelector(".header");
+const headerScroll = document.querySelector(".header");
 const scrolltop = document.querySelector("#scrolltop");
 window.addEventListener("scroll", () => {
 
     if (window.document.documentElement.scrollTop >= 100) {
-        header.classList.add("navbar-scroll");
+        headerScroll.classList.add("navbar-scroll");
         scrolltop.style.visibility = "visible"
     } else {
-        header.classList.remove("navbar-scroll");
+        headerScroll.classList.remove("navbar-scroll");
         scrolltop.style.visibility = "hidden"
     }
 })
