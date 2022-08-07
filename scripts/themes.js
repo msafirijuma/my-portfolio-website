@@ -1,4 +1,4 @@
-const themeToggler = document.querySelector("#themeToggler");
+let themeToggler = document.querySelector("#themeToggler");
 const sectionHeaders = document.querySelectorAll(".section-header");
 const labels = document.querySelectorAll(".form-label");
 const cards = document.querySelectorAll(".card")
@@ -8,7 +8,6 @@ const linkedins = document.querySelectorAll(".fa-linkedin");
 const githubs = document.querySelectorAll(".fa-github");
 const whatsapps = document.querySelectorAll(".fa-whatsapp");
 const btnAll = document.querySelectorAll(".btn");
-const btnContact = document.querySelector(".btn-contact-me");
 
 
 // Toggle Black Text Color (Dark Mode)
@@ -80,12 +79,6 @@ const toggleBtnDarkMode = () => {
         } else {
             btn.classList.remove("btn-dark-mode");
         }
-    }
-
-    if (btnContact.classList.contains("btn-contact-me")) {
-        btnContact.classList.replace("btn-contact-me", "btn-contact-me-dark-mode");
-    } else {
-        btnContact.classList.replace("btn-contact-me-dark-mode", "btn-contact-me");
     }
 
     localStorage.setItem("dark-mode", "enabled")
