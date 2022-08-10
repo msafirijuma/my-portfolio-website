@@ -8,6 +8,7 @@ const linkedins = document.querySelectorAll(".fa-linkedin");
 const githubs = document.querySelectorAll(".fa-github");
 const whatsapps = document.querySelectorAll(".fa-whatsapp");
 const btnAll = document.querySelectorAll(".btn");
+const header = document.querySelector(".header")
 
 
 // Toggle Black Text Color (Dark Mode)
@@ -139,6 +140,12 @@ const toggleDarkMode = () => {
         }
     }
 
+    if (header.classList.contains("header")) {
+        header.classList.replace("header", "header-dark-mode");
+    } else {
+        header.classList.replace("header-dark-mode", "header");
+    }
+
     localStorage.setItem("dark-mode", "enabled")
 }
 
@@ -217,15 +224,32 @@ themeToggler.addEventListener("click", () => {
 
 
 // Navbar Scroll AND chevron-up icon
-const header = document.querySelector(".header");
-const scrolltop = document.querySelector("#scrolltop");
-window.addEventListener("scroll", () => {
 
-    if (window.document.documentElement.scrollTop >= 100) {
-        header.classList.add("navbar-scroll");
-        scrolltop.style.visibility = "visible"
-    } else {
-        header.classList.remove("navbar-scroll");
-        scrolltop.style.visibility = "hidden"
-    }
-})
+let headerScroll = document.querySelector("#header");
+const scrolltop = document.querySelector("#scrolltop");
+const hamburgerLink = document.querySelector(".hamburger-link")
+
+if (headerScroll.classList.contains("header")) {
+    window.addEventListener("scroll", () => {
+
+        if (window.document.documentElement.scrollTop >= 100) {
+            headerScroll.classList.add("navbar-scroll");
+            scrolltop.style.visibility = "visible"
+        } else {
+            headerScroll.classList.remove("navbar-scroll");
+            scrolltop.style.visibility = "hidden"
+        }
+    })
+} else {
+    window.addEventListener("scroll", () => {
+        if (window.document.documentElement.scrollTop >= 100) {
+            headerScroll.classList.add("navbar-scroll-dark-mode");
+            scrolltop.style.visibility = "visible";
+            hamburgerLink.classList.add("hamburger-link-dark-mode");
+        } else {
+            headerScroll.classList.remove("navbar-scroll-dark-mode");
+            scrolltop.style.visibility = "hidden";
+            hamburgerLink.classList.remove("hamburger-link-dark-mode");
+        }
+    })
+}
