@@ -630,7 +630,7 @@ body::after {
   font-size: 1.1rem;
 }
 
-.contact-off-white-section {
+.contact-off-white-section form{
   color: #000;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
@@ -889,14 +889,95 @@ label {
     font-size: 1.6rem;
   }
 
-  .cards-container .card,
-    .cards-container .card-dark-mode {
-      width: 500px;
+  .social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
   }
 
+  .theme {
+    display: flex;
+    margin-block: 22px 10px;
+    margin-bottom: 2px;
+  }
+
+  #hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+
+  .cards-container .card,
+  .cards-container .card-dark-mode {
+      width: 95%;
+  }
+
+  .cards-container .card .card-img,
+  .cards-container .card-dark-mode .card-img {
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .card .card-text,
+  .card-dark-mode .card-text {
+    font-size: 1.4rem;
+    height: auto;
+  }
+
+  .article-container {
+    width: 90%;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 40%), -3px -3px 10px rgb(0 0 0 / 40%);
+    padding: 8px 20px;
+  }
   .contact-off-white-section form,
   .contact-off-white-dark-mode form {
-    width: 600px;
+    max-width: 550px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    max-width: none;
+  }
+
+  .education-section {
+    max-width: 500px;
+  }
+
+  .education-section .btn-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .education-section p,
+  .mission-section p,
+  .experience-section p {
+    line-height: 1.6rem;
+    margin: 2px;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .experience-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .experience-section li {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .btn-section .btn-link {
+    display: inline-block;
+    margin-inline: 60px;
   }
 }
 
@@ -950,6 +1031,7 @@ label {
 
   .experience-section {
     align-items: flex-start;
+    width: 90%;
   }
 
   .experience-section ul {
@@ -957,7 +1039,6 @@ label {
     margin-top: 1px;
     text-align: start;
   }
-
 
   #hero-section {
     display: flex;
