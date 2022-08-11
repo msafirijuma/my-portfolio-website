@@ -161,6 +161,7 @@ body::after {
 
 .theme {
   margin-top: -42px;
+  color: var(--off-white);
 }
 
 /* SOCIAL LINKS INSIDE HAMBURGER ICON MOBILE SCREEN SIZES */
@@ -779,6 +780,30 @@ label {
 
 /* MEDIA SCREEN ( MOBILE DEVICE ) */
 @media screen and (max-width: 992px) {
+  .header,
+  .header-dark-mode {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+  }
+
+  .brand-name {
+    margin-top: 2px;
+  }
+
+  .nav-bar {
+    margin-top: 6px;
+  }
+
+  .header .theme .fa,
+  .header-dark-mode .theme .fa {
+    font-size: 2.4rem;
+  }
+
   .cards-container .card,
   .cards-container .card-dark-mode {
     width: 330px;
@@ -788,7 +813,7 @@ label {
   .cards-container .card .card-img, 
   .cards-container .card-dark-mode .card-img {
     object-fit: cover;
-    height: 300px;
+    height: 200px;
   }
 
   .card-footer .btn-project {
@@ -801,7 +826,40 @@ label {
 
   .card .card-text, .card-dark-mode .card-text {
     font-size: 1.4rem;
-    height: 190px;
+    height: auto;
+  }
+
+  .article-container {
+    padding: 15px 20px;
+    line-height: 1.4rem;
+  }
+
+  .contact-off-white-section form,
+  .contact-off-white-dark-mode form {
+    width: 650px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    max-width: none;
+  }
+
+  .education-section p,
+  .mission-section p,
+  .experience-section p {
+    line-height: 1.6rem;
+    text-align: left;
+  }
+
+  .education-section,
+  .experience-section {
+    align-items: flex-start;
+    margin: 20px;
+    max-width: 800px;
+  }
+
+  .experience-section li {
+    text-align: left;
   }
 }
 
@@ -809,7 +867,6 @@ label {
 @media screen and (max-width: 768px) {
   .header .theme .fa,
   .header-dark-mode .theme .fa {
-    color: white;
     font-size: 2rem;
   } 
 
@@ -844,7 +901,7 @@ label {
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 45px;
+    top: 69px;
     left: 0;
     right: 0;
     background-color: lightslategray;
@@ -958,9 +1015,6 @@ label {
   .mission-section p,
   .experience-section p {
     line-height: 1.6rem;
-    margin: 2px;
-    font-weight: lighter;
-    font-size: 1.3rem;
     text-align: left;
   }
 
@@ -973,6 +1027,14 @@ label {
   .experience-section li {
     font-size: 1.1rem;
     text-align: left;
+  }
+
+  .mission-container {
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .btn-section .btn-link {
@@ -1130,7 +1192,7 @@ label {
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 45px;
+    top: 69px;
     left: 0;
     right: 0;
     background-color: lightslategray;
@@ -1224,7 +1286,6 @@ label {
 
 .header .theme .fa, 
 .header-dark-mode .theme .fa {
-  color: white;
   font-size: 2.2rem;
 }
 
@@ -1246,7 +1307,6 @@ label {
 
 .contact-off-white-dark-mode form {
   box-shadow: 1px 1px 4px white, -1px -1px 4px white;
-  padding: 30px;
   border-radius: 8px;
 }
 
@@ -1285,4 +1345,9 @@ label {
 .btn-contact-me-dark-mode {
   color: var(--text-white-color);
   background-color: var(--bg-off-white-dark-mode);
+}
+
+.theme-dark-mode {
+  color: var(--dark-mode);
+  font-size: 2.2rem;
 }

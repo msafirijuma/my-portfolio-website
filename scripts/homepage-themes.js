@@ -231,7 +231,8 @@ themeToggler.addEventListener("click", () => {
 
 let headerScroll = document.querySelector("#header");
 const scrolltop = document.querySelector("#scrolltop");
-const hamburgerLink = document.querySelector(".hamburger-link")
+const hamburgerLink = document.querySelector(".hamburger-link");
+const faDarkMode = document.querySelector(".theme")
 
 if (headerScroll.classList.contains("header")) {
     window.addEventListener("scroll", () => {
@@ -250,10 +251,12 @@ if (headerScroll.classList.contains("header")) {
             headerScroll.classList.add("navbar-scroll-dark-mode");
             scrolltop.style.visibility = "visible";
             hamburgerLink.classList.add("hamburger-link-dark-mode");
+            faDarkMode.classList.add("theme-dark-mode");
         } else {
             headerScroll.classList.remove("navbar-scroll-dark-mode");
             scrolltop.style.visibility = "hidden";
             hamburgerLink.classList.remove("hamburger-link-dark-mode");
+            faDarkMode.classList.remove("theme-dark-mode");
         }
     })
 }
