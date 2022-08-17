@@ -910,7 +910,7 @@ label {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 12px 10px;
+    padding: 10px 10px;
   }
   
   .brand-name {
@@ -943,7 +943,7 @@ label {
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 63px;
     left: 0;
     right: 0;
     background-color: lightslategray;
@@ -1279,7 +1279,7 @@ label {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 12px 10px;
+    padding: 10px 10px;
   }
 
   .brand-name {
@@ -1311,7 +1311,7 @@ label {
   .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 63px;
     left: 0;
     right: 0;
     background-color: lightslategray;
