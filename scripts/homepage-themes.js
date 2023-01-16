@@ -227,7 +227,7 @@ themeToggler.addEventListener("click", () => {
 })
 
 
-// Navbar Scroll AND chevron-up icon
+// Navbar scroll and  chevron-up icon
 
 let headerScroll = document.querySelector("#header");
 const scrolltop = document.querySelector("#scrolltop");
