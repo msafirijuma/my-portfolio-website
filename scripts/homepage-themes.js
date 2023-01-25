@@ -206,7 +206,7 @@ if (darkMode == "enabled") {
 
 // Dark AND Light Toggler
 themeToggler.addEventListener("click", () => {
-    window.location.reload();
+    // window.location.reload();
     darkMode = localStorage.getItem("dark-mode");
 
     if (darkMode === "disabled") {
