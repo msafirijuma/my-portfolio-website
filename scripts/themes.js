@@ -225,7 +225,7 @@ themeToggler.addEventListener("click", () => {
         toggleSocialLightMode();
     }
 
-    // window.location.reload();
+    window.location.reload();
 })
 
 
