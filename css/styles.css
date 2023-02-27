@@ -1409,8 +1409,8 @@ label {
 /* DARK AND LIGHT  MODE */
 
 .dark {
-  background-color: var(--dark-mode);
-  color: #fff;
+  background-color: var(--dark-mode) !important;
+  color: #fff !important;
 }
 
 .header .theme .fa,
@@ -1467,7 +1467,7 @@ label {
 
 .btn-dark-mode {
   color: var(--text-white-color);
-  background-color: var(--bg-off-white-dark-mode);
+  background-color: var(--bg-off-white-dark-mode) !important;
   outline: 1px solid var(--off-white);
 }
 

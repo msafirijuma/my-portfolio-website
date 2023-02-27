@@ -2,13 +2,13 @@ let themeToggler = document.querySelector("#themeToggler");
 const sectionHeaders = document.querySelectorAll(".section-header");
 const labels = document.querySelectorAll(".form-label");
 const cards = document.querySelectorAll(".card")
-let darkMode = localStorage.getItem("dark-mode")
 const twitters = document.querySelectorAll(".fa-twitter");
 const linkedins = document.querySelectorAll(".fa-linkedin");
 const githubs = document.querySelectorAll(".fa-github");
 const whatsapps = document.querySelectorAll(".fa-whatsapp");
 const btnAll = document.querySelectorAll(".btn");
-const header = document.querySelector(".header")
+let darkMode = localStorage.getItem("dark-mode")
+
 
 
 // Toggle Black Text Color (Dark Mode)
@@ -37,32 +37,24 @@ const toggleSocialDarkMode = () => {
     for (let twitter of twitters) {
         if (twitter.classList.contains("fa-twitter")) {
             twitter.classList.add("fa-social-dark-mode")
-        } else {
-            twitter.classList.remove("fa-social-dark-mode");
         }
     }
 
     for (let linkedin of linkedins) {
         if (linkedin.classList.contains("fa-linkedin")) {
             linkedin.classList.add("fa-social-dark-mode")
-        } else {
-            linkedin.classList.remove("fa-social-dark-mode");
         }
     }
 
     for (let github of githubs) {
         if (github.classList.contains("fa-github")) {
             github.classList.add("fa-social-dark-mode")
-        } else {
-            github.classList.remove("fa-social-dark-mode");
         }
     }
 
     for (let whatsapp of whatsapps) {
         if (whatsapp.classList.contains("fa-whatsapp")) {
             whatsapp.classList.add("fa-social-dark-mode")
-        } else {
-            whatsapp.classList.remove("fa-social-dark-mode");
         }
     }
 
@@ -70,6 +62,29 @@ const toggleSocialDarkMode = () => {
 }
 
 const toggleSocialLightMode = () => {
+    for (let twitter of twitters) {
+        if (twitter.classList.contains("fa-twitter")) {
+            twitter.classList.remove("fa-social-dark-mode")
+        }
+    }
+
+    for (let linkedin of linkedins) {
+        if (linkedin.classList.contains("fa-linkedin")) {
+            linkedin.classList.remove("fa-social-dark-mode")
+        }
+    }
+
+    for (let github of githubs) {
+        if (github.classList.contains("fa-github")) {
+            github.classList.remove("fa-social-dark-mode")
+        }
+    }
+
+    for (let whatsapp of whatsapps) {
+        if (whatsapp.classList.contains("fa-whatsapp")) {
+            whatsapp.classList.remove("fa-social-dark-mode")
+        }
+    }
     localStorage.setItem("dark-mode", "disabled")
 }
 
@@ -115,6 +130,7 @@ const toggleDarkMode = () => {
     themeToggler.classList.replace("fa-moon-o", "fa-sun-o");
     let offWhiteContainers = document.querySelectorAll(".off-white-section");
     let coloredContainers = document.querySelectorAll(".container");
+    let header = document.querySelector(".header")
 
     for (let offWhiteContainer of offWhiteContainers) {
         if (offWhiteContainer.classList.contains("off-white-section")) {
@@ -141,11 +157,9 @@ const toggleDarkMode = () => {
     }
 
     if (header.classList.contains("header")) {
-        header.classList.replace("header", "header-dark-mode");
-    } else {
-        header.classList.replace("header-dark-mode", "header");
+        header.classList.add("header-dark-mode");
     }
-
+    document.body.classList.add("dark");
     localStorage.setItem("dark-mode", "enabled")
 }
 
@@ -155,6 +169,7 @@ const toggleLightMode = () => {
     themeToggler.classList.replace("fa-sun-o", "fa-moon-o")
     let offWhiteContainers = document.querySelectorAll(".off-white-dark-mode");
     let coloredContainers = document.querySelectorAll(".colored-container-dark-mode");
+    let header = document.querySelector(".header")
 
     for (let offWhiteContainer of offWhiteContainers) {
         if (offWhiteContainer.classList.contains("off-white-dark-mode")) {
@@ -180,6 +195,10 @@ const toggleLightMode = () => {
         }
     }
 
+    if (header.classList.contains("header-dark-mode")) {
+        header.classList.remove("header-dark-mode");
+    }
+    document.body.classList.remove("dark");
     localStorage.setItem("dark-mode", "disabled")
 }
 
@@ -190,36 +209,23 @@ if (darkMode == "enabled") {
     toggleTextColorDark();     // toggle default when page loads
 }
 
-// Dark AND Light Toggler
+// Dark and Light Toggler
 themeToggler.addEventListener("click", () => {
     darkMode = localStorage.getItem("dark-mode");
 
-    if (darkMode === "disabled" && themeToggler.title) {
+    if (darkMode === "disabled") {
         toggleDarkMode();
         toggleTextColorDark();
         toggleBtnDarkMode();
         toggleSocialDarkMode();
-        themeToggler.title = "Switch to light mode"
     } else {
         toggleLightMode();
         toggleTextColorLight();
         toggleBtnLightMode();
         toggleSocialLightMode();
-        themeToggler.title = "Switch to dark mode"
     }
 
-    // if (themeToggler.classList.contains("fa-moon-o") && (themeToggler.title)) {
-    //     toggleDarkMode();
-    //     toggleTextColorDark();
-    //     themeToggler.title = "Switch to light mode"
-    // } else {
-    //     toggleLightMode();
-    //     toggleTextColorLight();
-    //     themeToggler.title = "Switch to dark mode"
-    // }
-    document.body.classList.toggle("dark");
-
-    window.location.reload();
+    // window.location.reload();
 })
 
 
